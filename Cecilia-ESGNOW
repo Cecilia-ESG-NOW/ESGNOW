@@ -1,0 +1,123 @@
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cecilia ESG · NOW</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ✅ 更稳：让相对路径永远以“当前目录”为基准 -->
+  <base href="">
+
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      max-width: 720px;
+      margin: 60px auto;
+      padding: 0 20px;
+      line-height: 1.7;
+      color: #222;
+    }
+    h1, h2 {
+      font-weight: 500;
+      margin-top: 2.5em;
+    }
+    nav {
+      margin-bottom: 3em;
+    }
+    nav a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #444;
+      font-size: 0.95em;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .philosophy {
+      margin-top: 2em;
+    }
+    .lang {
+      margin-top: 2.5em;
+    }
+    .lang h2 {
+      font-size: 1.1em;
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <!-- ✅ 目录友好：适配 /ESGNOW/ 与未来路径调整 -->
+  <a href="./">About</a>
+  <a href="./projects.html">Projects</a>
+  <a href="./contact.html">Contact</a>
+</nav>
+
+<h1>Cecilia ESG · NOW</h1>
+
+<div class="philosophy">
+
+  <div class="lang">
+    <h2>English</h2>
+
+    <p>
+      Although we remain confident in the future of sustainable development,
+      the reality is that our past reliance on extensive production models and
+      the excessive pursuit of fast fashion across many fields have already left us
+      with an overwhelming amount of materials that are difficult to degrade.
+    </p>
+
+    <p>
+      My belief is this: if we cannot meaningfully engage with these materials that already exist—
+      whether they are considered fashionable or obsolete—then sustainability remains an abstract promise.
+    </p>
+
+    <p>
+      As designers committed to sustainable fashion, we have the responsibility
+      and the ability to re-create, to transform what already surrounds us,
+      and to give these materials a new life.
+    </p>
+
+    <p>
+      In doing so, sustainability is no longer a distant goal,
+      but a daily practice—something we live, shape,
+      and reaffirm in every moment.
+    </p>
+  </div>
+
+  <div class="lang" lang="fr">
+    <h2>Français</h2>
+
+    <p>
+      Bien que nous ayons confiance dans l’avenir du développement durable,
+      il est indéniable que nos modes de production passés, souvent extensifs,
+      ainsi que la quête excessive de la mode rapide dans de nombreux secteurs,
+      ont déjà généré une quantité considérable de matériaux difficiles à dégrader.
+    </p>
+
+    <p>
+      Ma conviction est la suivante : si nous ne sommes pas capables de travailler
+      avec ces matériaux déjà existants — qu’ils soient encore à la mode
+      ou désormais dépassés — la durabilité reste une idée abstraite.
+    </p>
+
+    <p>
+      En tant que designers engagés dans une mode durable,
+      nous avons la capacité et la responsabilité de recréer,
+      de transformer, et de redonner une nouvelle vie à ce qui est déjà là.
+    </p>
+
+    <p>
+      Ainsi, le développement durable cesse d’être un objectif lointain
+      pour devenir une pratique quotidienne,
+      une philosophie vécue à travers chaque geste et chaque instant.
+    </p>
+  </div>
+
+</div>
+
+</body>
+</html>
