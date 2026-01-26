@@ -1,123 +1,184 @@
-index.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Cecilia ESG · NOW</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- ✅ 更稳：让相对路径永远以“当前目录”为基准 -->
-  <base href="">
+  <meta charset="UTF-8" />
+  <title>ESG · NOW</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="ESG · NOW — a philosophy of sustainable practice across design, materials, and daily life." />
 
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      max-width: 720px;
-      margin: 60px auto;
-      padding: 0 20px;
-      line-height: 1.7;
-      color: #222;
+    :root{
+      --text:#222;
+      --muted:#555;
+      --link:#444;
+      --max:720px;
     }
-    h1, h2 {
-      font-weight: 500;
-      margin-top: 2.5em;
+
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      max-width:var(--max);
+      margin:60px auto;
+      padding:0 20px;
+      line-height:1.8;
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
     }
-    nav {
-      margin-bottom: 3em;
+
+    h1{
+      font-weight:600;
+      letter-spacing:0.2px;
+      margin:0 0 1.2em;
+      font-size:2.2rem;
     }
-    nav a {
-      margin-right: 15px;
-      text-decoration: none;
-      color: #444;
-      font-size: 0.95em;
+
+    nav{
+      margin-bottom:3.2em;
+      font-size:0.95em;
     }
-    nav a:hover {
-      text-decoration: underline;
+    nav a{
+      margin-right:15px;
+      text-decoration:none;
+      color:var(--link);
     }
-    .philosophy {
-      margin-top: 2em;
+    nav a:hover{ text-decoration:underline; }
+
+    .philosophy{ margin-top:2em; }
+
+    /* language blocks */
+    .lang{
+      margin-top:2.8em;
+      padding-top:2.2em;
+      border-top:1px solid rgba(0,0,0,0.08);
     }
-    .lang {
-      margin-top: 2.5em;
+    .lang:first-child{
+      margin-top:0;
+      padding-top:0;
+      border-top:none;
     }
-    .lang h2 {
-      font-size: 1.1em;
-      color: #555;
+
+    .lang h2{
+      font-size:0.95em;
+      font-weight:600;
+      color:var(--muted);
+      margin:0 0 1.2em;
+      letter-spacing:0.4px;
+      text-transform:uppercase;
+    }
+
+    .lang p{
+      margin:0 0 1.15em;
+    }
+    .lang p:last-child{ margin-bottom:0; }
+
+    /* Improve Chinese readability */
+    [lang="zh-Hans"]{
+      line-height:1.95;
+      letter-spacing:0.2px;
+    }
+
+    /* Small screens */
+    @media (max-width: 520px){
+      body{ margin:40px auto; }
+      h1{ font-size:2rem; }
+      nav a{ margin-right:12px; }
     }
   </style>
 </head>
 
 <body>
+  <nav aria-label="Primary navigation">
+    <a href="./">About</a>
+    <a href="./projects.html">Projects</a>
+    <a href="./contact.html">Contact</a>
+  </nav>
 
-<nav>
-  <!-- ✅ 目录友好：适配 /ESGNOW/ 与未来路径调整 -->
-  <a href="./">About</a>
-  <a href="./projects.html">Projects</a>
-  <a href="./contact.html">Contact</a>
-</nav>
+  <main>
+    <h1>ESG · NOW</h1>
 
-<h1>Cecilia ESG · NOW</h1>
+    <div class="philosophy">
 
-<div class="philosophy">
+      <!-- EN -->
+      <section class="lang" lang="en">
 
-  <div class="lang">
-    <h2>English</h2>
+        <p>
+          Although we remain confident in the future of sustainable development,
+          the reality is that our past reliance on extensive production models and
+          the excessive pursuit of fast fashion across many fields have already left us
+          with an overwhelming amount of materials that are difficult to degrade.
+        </p>
 
-    <p>
-      Although we remain confident in the future of sustainable development,
-      the reality is that our past reliance on extensive production models and
-      the excessive pursuit of fast fashion across many fields have already left us
-      with an overwhelming amount of materials that are difficult to degrade.
-    </p>
+        <p>
+          My belief is this: if we cannot meaningfully engage with these materials that already exist—
+          whether they are considered fashionable or obsolete—then sustainability remains an abstract promise.
+        </p>
 
-    <p>
-      My belief is this: if we cannot meaningfully engage with these materials that already exist—
-      whether they are considered fashionable or obsolete—then sustainability remains an abstract promise.
-    </p>
+        <p>
+          As designers committed to sustainable fashion, we have the responsibility
+          and the ability to re-create, to transform what already surrounds us,
+          and to give these materials a new life.
+        </p>
 
-    <p>
-      As designers committed to sustainable fashion, we have the responsibility
-      and the ability to re-create, to transform what already surrounds us,
-      and to give these materials a new life.
-    </p>
+        <p>
+          In doing so, sustainability is no longer a distant goal,
+          but a daily practice—something we live, shape,
+          and reaffirm in every moment.
+        </p>
+      </section>
 
-    <p>
-      In doing so, sustainability is no longer a distant goal,
-      but a daily practice—something we live, shape,
-      and reaffirm in every moment.
-    </p>
-  </div>
+      <!-- FR -->
+      <section class="lang" lang="fr">
 
-  <div class="lang" lang="fr">
-    <h2>Français</h2>
+        <p>
+          Bien que nous ayons confiance dans l’avenir du développement durable,
+          il est indéniable que nos modes de production passés, souvent extensifs,
+          ainsi que la quête excessive de la mode rapide dans de nombreux secteurs,
+          ont déjà généré une quantité considérable de matériaux difficiles à dégrader.
+        </p>
 
-    <p>
-      Bien que nous ayons confiance dans l’avenir du développement durable,
-      il est indéniable que nos modes de production passés, souvent extensifs,
-      ainsi que la quête excessive de la mode rapide dans de nombreux secteurs,
-      ont déjà généré une quantité considérable de matériaux difficiles à dégrader.
-    </p>
+        <p>
+          Ma conviction est la suivante : si nous ne sommes pas capables de travailler
+          avec ces matériaux déjà existants — qu’ils soient encore à la mode
+          ou désormais dépassés — la durabilité reste une idée abstraite.
+        </p>
 
-    <p>
-      Ma conviction est la suivante : si nous ne sommes pas capables de travailler
-      avec ces matériaux déjà existants — qu’ils soient encore à la mode
-      ou désormais dépassés — la durabilité reste une idée abstraite.
-    </p>
+        <p>
+          En tant que designers engagés dans une mode durable,
+          nous avons la capacité et la responsabilité de recréer,
+          de transformer, et de redonner une nouvelle vie à ce qui est déjà là.
+        </p>
 
-    <p>
-      En tant que designers engagés dans une mode durable,
-      nous avons la capacité et la responsabilité de recréer,
-      de transformer, et de redonner une nouvelle vie à ce qui est déjà là.
-    </p>
+        <p>
+          Ainsi, le développement durable cesse d’être un objectif lointain
+          pour devenir une pratique quotidienne,
+          une philosophie vécue à travers chaque geste et chaque instant.
+        </p>
+      </section>
 
-    <p>
-      Ainsi, le développement durable cesse d’être un objectif lointain
-      pour devenir une pratique quotidienne,
-      une philosophie vécue à travers chaque geste et chaque instant.
-    </p>
-  </div>
+      <!-- ZH -->
+      <section class="lang" lang="zh-Hans"
 
-</div>
+        <p>
+          尽管我们仍对可持续发展的未来保持信心，但不可否认的是：过去长期依赖的大规模生产模式，
+          以及各行业对快时尚的过度追逐，已经让我们面对大量难以降解的材料存量。
+        </p>
 
+        <p>
+          我的信念是：如果我们无法真正与这些已经存在的材料建立关系——无论它们仍被视为“时髦”，
+          还是已被认为“过时”——那么可持续性就仍然只是一个抽象的承诺。
+        </p>
+
+        <p>
+          作为致力于可持续时尚的设计师，我们有责任、也有能力去再创造：把身边已经存在的材料重新转化，
+          赋予它们新的生命。
+        </p>
+
+        <p>
+          如此一来，可持续性不再是遥远的目标，而是一种日常实践——在每个当下被我们践行、塑造并不断确认。
+        </p>
+      </section>
+
+    </div>
+  </main>
 </body>
 </html>
