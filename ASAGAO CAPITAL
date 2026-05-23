@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ASAGAO CAPITAL · Cecilia ESG · NOW</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      max-width: 720px;
+      margin: 60px auto;
+      padding: 0 20px;
+      line-height: 1.7;
+      color: #222;
+      background: #fff;
+    }
+
+    nav {
+      margin-bottom: 3em;
+    }
+
+    nav a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #444;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    h1 {
+      margin-bottom: 0.6em;
+      font-size: 3em;
+      font-weight: 600;
+      letter-spacing: -1px;
+    }
+
+    .meta {
+      font-size: 0.9em;
+      color: #666;
+      margin-bottom: 2.5em;
+    }
+
+    .media iframe {
+      width: 100%;
+      height: 420px;
+      border: none;
+      margin: 2em 0 1em 0;
+    }
+
+    .caption {
+      font-size: 0.85em;
+      color: #777;
+      margin-bottom: 3em;
+    }
+
+    h2 {
+      margin-top: 3em;
+      margin-bottom: 1.2em;
+      font-size: 1.5em;
+      font-weight: 600;
+    }
+
+    .sub-projects {
+      margin-top: 2em;
+    }
+
+    .sub-projects a {
+      display: block;
+      padding: 18px 0;
+      border-bottom: 1px solid #e5e5e5;
+      text-decoration: none;
+      color: #222;
+      font-size: 1.05em;
+      transition: opacity 0.25s ease;
+    }
+
+    .sub-projects a:hover {
+      opacity: 0.55;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <a href="../index.html">About</a>
+  <a href="../projects.html">Projects</a>
+  <a href="../lectures.html">Lectures</a>
+  <a href="../contact.html">Contact</a>
+</nav>
+
+<h1>ASAGAO CAPITAL</h1>
+
+<p class="meta">
+  Economics · Investment · Information Studies · Data Science
+</p>
+
+<div class="media">
+
+  <!-- Replace YOUR_VIDEO_ID -->
+  <iframe
+    src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+    title="ASAGAO CAPITAL"
+    allowfullscreen>
+  </iframe>
+
+  <p class="caption">
+    Strategic thinking · Financial analysis · Business education · Quantitative reasoning
+  </p>
+
+</div>
+
+<h2>Capital & Business Study Projects</h2>
+
+<div class="sub-projects">
+
+  <a href="business-school-preparation.html">
+    01 · 备考商学院
+  </a>
+
+</div>
+
+</body>
+</html>
