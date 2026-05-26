@@ -1,191 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-
   <title>ASAGAO Wellness · Cecilia ESG · NOW</title>
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
-
     :root {
       --text: #222;
       --soft-text: #666;
       --light-text: #888;
       --line: #e8e8e8;
       --hover: #000;
-      --bg: #ffffff;
+      --bg: #fff;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
-      font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        sans-serif;
-
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       max-width: 820px;
-
       margin: 72px auto;
-
-      padding:
-        0 28px
-        120px;
-
+      padding: 0 28px 120px;
       line-height: 1.9;
-
       color: var(--text);
-
       background: var(--bg);
-
       -webkit-font-smoothing: antialiased;
-
       text-rendering: optimizeLegibility;
     }
 
-    nav {
-      margin-bottom: 4em;
-    }
+    nav { margin-bottom: 4em; }
 
     nav a {
       margin-right: 22px;
-
       text-decoration: none;
-
       color: var(--soft-text);
-
       font-size: 0.95em;
-
       transition: color 0.25s ease;
     }
 
-    nav a:hover {
-      color: var(--hover);
-    }
+    nav a:hover { color: var(--hover); }
 
     h1 {
       font-size: clamp(2.8rem, 6vw, 4.2rem);
-
       font-weight: 700;
-
       letter-spacing: -2px;
-
       margin-bottom: 0.35em;
-
       line-height: 1.05;
     }
 
     h2 {
       margin-top: 3em;
-
       margin-bottom: 0.5em;
-
       font-size: 1.5em;
-
       font-weight: 600;
-
       letter-spacing: -0.5px;
     }
 
     h2 a {
       text-decoration: none;
-
       color: var(--text);
-
       transition: opacity 0.25s ease;
     }
 
-    h2 a:hover {
-      opacity: 0.6;
-    }
+    h2 a:hover { opacity: 0.6; }
 
     h3 {
       margin-top: 0.2em;
-
       margin-bottom: 0.8em;
-
       color: var(--soft-text);
-
       font-size: 1.02em;
-
       font-weight: 500;
     }
 
     .meta {
       color: var(--light-text);
-
       font-size: 0.92em;
-
       letter-spacing: 0.3px;
-
       margin-bottom: 2.2em;
     }
 
     .caption {
       font-size: 0.86em;
-
       color: var(--light-text);
-
       margin-top: -0.5em;
-
       margin-bottom: 2.2em;
-
       line-height: 1.7;
     }
 
     .caption a {
       color: var(--soft-text);
-
       text-decoration: underline;
-
       text-underline-offset: 3px;
-
-      transition:
-        color 0.25s ease,
-        opacity 0.25s ease;
+      transition: color 0.25s ease, opacity 0.25s ease;
     }
 
     .caption a:hover {
       color: var(--hover);
-
       opacity: 0.8;
     }
 
     .media {
-      margin:
-        3em 0
-        2.5em;
+      margin: 3em 0 2.5em;
     }
 
     .media iframe {
       width: 100%;
-
       aspect-ratio: 16 / 9;
-
       border: none;
-
       display: block;
-
       border-radius: 10px;
     }
 
     p {
       margin-bottom: 1.4em;
-
       color: #333;
     }
 
     section {
       margin-top: 5em;
-
       padding-top: 2em;
-
       border-top: 1px solid var(--line);
     }
 
@@ -198,14 +132,9 @@
     }
 
     @media (max-width: 768px) {
-
       body {
         margin: 48px auto;
-
-        padding:
-          0 20px
-          80px;
-
+        padding: 0 20px 80px;
         line-height: 1.85;
       }
 
@@ -215,16 +144,13 @@
 
       nav a {
         display: inline-block;
-
         margin-bottom: 10px;
       }
 
       h2 {
         margin-top: 2.4em;
       }
-
     }
-
   </style>
 </head>
 
@@ -254,7 +180,6 @@
   </p>
 
   <div class="media">
-
     <iframe
       src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
       title="ASAGAO Wellness Introduction"
@@ -262,7 +187,6 @@
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen>
     </iframe>
-
   </div>
 
   <p class="caption">
@@ -270,57 +194,119 @@
   </p>
 
   <p>
-    ASAGAO Wellness explores quiet luxury wellness,
-    ritual care,
-    nervous system restoration,
-    and holistic bodywork through a refined,
-    sensory,
-    and mindful approach.
+    ASAGAO Wellness explores quiet luxury wellness, ritual care, nervous system restoration,
+    and holistic bodywork through a refined, sensory, and mindful approach.
   </p>
 
   <p>
-    The project integrates Eastern healing philosophy,
-    therapeutic touch,
-    breath awareness,
+    The project integrates Eastern healing philosophy, therapeutic touch, breath awareness,
     and slow living principles into a contemporary wellness experience.
   </p>
 
   <p>
-    Wellness is framed not only as physical relaxation,
-    but as a deeper practice of presence,
-    restoration,
-    emotional grounding,
-    and reconnection with the body.
+    Wellness is framed not only as physical relaxation, but as a deeper practice of presence,
+    restoration, emotional grounding, and reconnection with the body.
   </p>
 
   <section>
-
     <h2>ASAGAO Wellness Treatments</h2>
 
     <div class="category-links">
 
-      <h2>
-        <a href="asagao-head.html">
-          01 · Head Ritual
-        </a>
-      </h2>
+      <h2><a href="asagao-head.html">01 · Head Ritual</a></h2>
+      <h3>Head · Scalp · Nervous System Reset</h3>
+      <p>A calming ritual focused on the head, scalp, and nervous system relaxation.</p>
 
-      <h3>
-        Head · Scalp · Nervous System Reset
-      </h3>
+      <h2><a href="asagao-face.html">02 · Facial Ritual</a></h2>
+      <h3>Face · Jaw · Sensory Softening</h3>
+      <p>A gentle facial wellness ritual for softening tension and restoring calm expression.</p>
 
-      <p>
-        A calming ritual focused on the head,
-        scalp,
-        and nervous system relaxation.
-      </p>
+      <h2><a href="asagao-hand.html">03 · Hand Renewal Ritual</a></h2>
+      <h3>Hands · Touch · Emotional Grounding</h3>
+      <p>A restorative hand ritual designed to support sensory restoration and emotional grounding.</p>
 
-      <!-- Continue same structure below -->
+      <h2><a href="asagao-chest.html">04 · Chest Release</a></h2>
+      <h3>Chest · Breath · Openness</h3>
+      <p>A gentle ritual supporting breath awareness, openness, and release of upper-body tension.</p>
+
+      <h2><a href="asagao-abdomen.html">05 · Abdominal Care</a></h2>
+      <h3>Abdomen · Center · Internal Calm</h3>
+      <p>A grounding ritual focused on the abdomen, digestive comfort, and inner stability.</p>
+
+      <h2><a href="asagao-front-legs.html">06 · Front Leg Therapy</a></h2>
+      <h3>Front Legs · Circulation · Grounding</h3>
+      <p>A lower-body treatment supporting lightness, circulation, and physical grounding.</p>
+
+      <h2><a href="asagao-foot.html">07 · Foot Ritual</a></h2>
+      <h3>Feet · Reflexive Calm · Foundation</h3>
+      <p>A grounding foot ritual designed to restore balance, warmth, and deep relaxation.</p>
+
+      <h2><a href="asagao-neck-shoulder.html">08 · Neck & Shoulder Release</a></h2>
+      <h3>Neck · Shoulders · Upper-Body Tension</h3>
+      <p>A focused release ritual for accumulated tension around the neck, shoulders, and upper back.</p>
+
+      <h2><a href="asagao-back.html">09 · Back Therapy</a></h2>
+      <h3>Back · Spine · Restorative Flow</h3>
+      <p>A restorative back treatment supporting muscular ease, breath, and postural comfort.</p>
+
+      <h2><a href="asagao-glute.html">10 · Gluteal Release</a></h2>
+      <h3>Glutes · Hips · Lower-Body Stability</h3>
+      <p>A therapeutic release focused on hip tension, lower-body support, and structural balance.</p>
+
+      <h2><a href="asagao-back-legs.html">11 · Back Leg Therapy</a></h2>
+      <h3>Back Legs · Hamstrings · Restorative Mobility</h3>
+      <p>A posterior-leg treatment supporting mobility, recovery, and grounded relaxation.</p>
+
+      <h2><a href="asagao-full-body.html">12 · Full Body Ritual</a></h2>
+      <h3>Whole Body · Integration · Deep Restoration</h3>
+      <p>A complete ritual integrating therapeutic touch, breath, sensory restoration, and calm presence.</p>
+
+      <h2><a href="asagao-hot-stone.html">13 · Hot Stone Therapy</a></h2>
+      <h3>Heat · Stones · Deep Relaxation</h3>
+      <p>A warming therapy using stones to support muscular release and deep nervous system settling.</p>
+
+      <h2><a href="asagao-gua-sha.html">14 · Gua Sha Therapy</a></h2>
+      <h3>Gua Sha · Flow · Surface Release</h3>
+      <p>A traditional-inspired technique supporting circulation, tissue release, and energetic flow.</p>
+
+      <h2><a href="asagao-moxibustion.html">15 · Moxibustion</a></h2>
+      <h3>Warmth · Moxa · Internal Balance</h3>
+      <p>A warming wellness practice rooted in Eastern healing traditions.</p>
+
+      <h2><a href="asagao-cupping.html">16 · Cupping Therapy</a></h2>
+      <h3>Cupping · Circulation · Tension Release</h3>
+      <p>A therapeutic technique using suction to support tissue mobility and muscular release.</p>
+
+      <h2><a href="asagao-acupuncture.html">17 · Acupuncture</a></h2>
+      <h3>Meridians · Regulation · Traditional Healing</h3>
+      <p>A traditional modality supporting balance, regulation, and holistic well-being.</p>
+
+      <h2><a href="asagao-self-care.html">18 · Self-Massage Care</a></h2>
+      <h3>Daily Ritual · Self-Care · Body Awareness</h3>
+      <p>Simple self-massage practices for everyday restoration and body connection.</p>
+
+      <h2><a href="asagao-tai-chi.html">19 · Tai Chi</a></h2>
+      <h3>Movement · Breath · Internal Balance</h3>
+      <p>A mindful movement practice cultivating balance, flow, and internal calm.</p>
+
+      <h2><a href="asagao-yoga.html">20 · Yoga</a></h2>
+      <h3>Breath · Flexibility · Mindful Rest</h3>
+      <p>A contemplative body practice supporting flexibility, breath awareness, and mental ease.</p>
+
+      <h2><a href="asagao-pilates.html">21 · Pilates</a></h2>
+      <h3>Core · Alignment · Functional Strength</h3>
+      <p>A mindful movement method supporting posture, stability, and body awareness.</p>
+
+      <h2><a href="asagao-tea-ceremony.html">22 · Tea Ceremony</a></h2>
+      <h3>Tea · Presence · Ritual Stillness</h3>
+      <p>A quiet ritual of tea, breath, and sensory presence.</p>
+
+      <h2><a href="asagao-food-as-medicine.html">23 · Food as Medicine</a></h2>
+      <h3>Nutrition · TCM · Seasonal Balance</h3>
+      <p>A wellness approach exploring food, seasonality, and nourishment as daily medicine.</p>
 
     </div>
-
   </section>
 
 </body>
-
 </html>
