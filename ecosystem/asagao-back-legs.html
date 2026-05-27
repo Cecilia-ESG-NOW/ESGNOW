@@ -30,10 +30,12 @@
       text-decoration: none;
       color: #444;
       font-size: 0.95em;
+      transition: opacity 0.2s ease;
     }
 
     nav a:hover {
       text-decoration: underline;
+      opacity: 0.7;
     }
 
     h1 {
@@ -48,6 +50,7 @@
       font-size: 1em;
       color: #777;
       margin-bottom: 4em;
+      letter-spacing: 0.3px;
     }
 
     .intro {
@@ -65,13 +68,33 @@
       width: 100%;
       height: auto;
       display: block;
-      border-radius: 8px;
+      border-radius: 18px;
     }
 
     .caption {
       font-size: 0.9em;
       color: #777;
-      margin-top: 0.8em;
+      margin-top: 0.9em;
+      line-height: 1.7;
+      letter-spacing: 0.2px;
+    }
+
+    @media (max-width: 768px) {
+
+      body {
+        margin: 24px auto;
+        padding: 0 18px;
+      }
+
+      h1 {
+        font-size: 2.8em;
+        letter-spacing: -1px;
+      }
+
+      .gallery {
+        gap: 50px;
+      }
+
     }
 
   </style>
@@ -119,6 +142,7 @@
 
   <div class="gallery-item">
     <img src="../images/back-leg-therapy-01.png" alt="Back Leg Therapy 01">
+
     <p class="caption">
       Posterior meridian pathways · Hamstrings · Grounded mobility · Deep release
     </p>
@@ -126,6 +150,7 @@
 
   <div class="gallery-item">
     <img src="../images/back-leg-therapy-02.png" alt="Back Leg Therapy 02">
+
     <p class="caption">
       ASAGAO WELLNESS · Quiet luxury therapeutic leg care
     </p>
@@ -133,6 +158,7 @@
 
   <div class="gallery-item">
     <img src="../images/back-leg-therapy-03.png" alt="Back Leg Therapy 03">
+
     <p class="caption">
       Back legs · Fascia flow · Recovery · Restorative movement
     </p>
@@ -140,22 +166,25 @@
 
   <div class="gallery-item">
     <img src="../images/back-leg-therapy-04.png" alt="Back Leg Therapy 04">
+
     <p class="caption">
-      Back legs · Fascia flow · Recovery · Restorative movement
+      Spleen meridian · Posterior leg support · Grounding recovery
     </p>
   </div>
 
   <div class="gallery-item">
     <img src="../images/back-leg-therapy-05.png" alt="Back Leg Therapy 05">
+
     <p class="caption">
-      Back legs · Fascia flow · Recovery · Restorative movement
+      Bladder meridian · Hamstrings · Calves · Restorative flow
     </p>
   </div>
 
   <div class="gallery-item">
     <img src="../images/back-leg-therapy-06.png" alt="Back Leg Therapy 06">
+
     <p class="caption">
-      Back legs · Fascia flow · Recovery · Restorative movement
+      Gallbladder meridian · Lateral leg balance · Mobility support
     </p>
   </div>
 
