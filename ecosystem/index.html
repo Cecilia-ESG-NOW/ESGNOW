@@ -2,64 +2,80 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>ASAGAO Ecosystem · Cecilia ESG · NOW</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="ASAGAO Ecosystem — sustainability, wellness, theatre, aesthetics, and capital systems." />
 
   <style>
+    :root {
+      --text: #222;
+      --muted: #555;
+      --link: #444;
+      --border: rgba(0, 0, 0, 0.08);
+      --max: 720px;
+    }
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      max-width: 760px;
+      max-width: var(--max);
       margin: 60px auto;
       padding: 0 20px;
-      line-height: 1.7;
-      color: #222;
+      line-height: 1.8;
+      color: var(--text);
       background: #fff;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
     nav {
-      margin-bottom: 3em;
+      margin-bottom: 3.2em;
+      font-size: 0.95em;
     }
 
     nav a {
-      margin-right: 18px;
+      margin-right: 15px;
       text-decoration: none;
-      color: #444;
-      font-size: 0.95em;
+      color: var(--link);
     }
 
     nav a:hover {
       text-decoration: underline;
     }
 
-    h1 {
-      font-size: 3em;
-      margin-bottom: 0.4em;
+    nav a.current {
       font-weight: 600;
-      letter-spacing: -1px;
+    }
+
+    h1 {
+      font-weight: 600;
+      letter-spacing: 0.2px;
+      margin: 0 0 0.8em;
+      font-size: 2.2rem;
     }
 
     .subtitle {
-      color: #666;
-      margin-bottom: 3.5em;
+      color: var(--muted);
       max-width: 640px;
+      margin: 0 0 3.5em;
     }
 
     .section {
       margin-bottom: 2.8em;
-      padding-top: 1.8em;
-      border-top: 1px solid #ddd;
+      padding-top: 2em;
+      border-top: 1px solid var(--border);
     }
 
     .section h2 {
-      margin-bottom: 0.3em;
-      font-size: 1.4em;
+      margin: 0 0 0.4em;
+      font-size: 1.25em;
       font-weight: 600;
+      letter-spacing: 0.2px;
     }
 
     .section a {
       text-decoration: none;
-      color: #222;
+      color: var(--text);
     }
 
     .section a:hover {
@@ -67,82 +83,104 @@
     }
 
     .meta {
-      color: #666;
+      color: var(--muted);
       font-size: 0.95em;
-      margin-top: 0.4em;
+      margin: 0;
+    }
+
+    footer {
+      margin-top: 4em;
+      padding-top: 2em;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 520px) {
+      body {
+        margin: 40px auto;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      nav a {
+        margin-right: 12px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <nav>
+  <nav aria-label="Primary navigation">
     <a href="../index.html">About</a>
-    <a href="./">ASAGAO Ecosystem</a>
-    <a href="../lectures.html">Lectures</a>
+    <a href="index.html" class="current">Ecosystem</a>
+    <a href="https://cecilia--studio.blogspot.com/"
+       target="_blank"
+       rel="noopener noreferrer">Journal</a>
+    <a href="../lectures.html">Learning</a>
     <a href="../testimonials.html">Testimonials</a>
     <a href="../contact.html">Contact</a>
   </nav>
 
-  <h1>ASAGAO Ecosystem</h1>
+  <main>
+    <h1>ASAGAO Ecosystem</h1>
 
-  <p class="subtitle">
-    A multidisciplinary ecosystem exploring sustainability,
-    wellness, theatre, aesthetics, and capital systems.
-  </p>
-
-  <section class="section">
-    <h2>
-      <a href="asagao-sustainability.html">
-        ASAGAO SUSTAINABILITY
-      </a>
-    </h2>
-
-    <p class="meta">
-      ESG · Sustainability Systems · Green Finance · Ecological Research
+    <p class="subtitle">
+      A multidisciplinary ecosystem exploring sustainability,
+      wellness, theatre, aesthetics, and capital systems.
     </p>
-  </section>
 
-  <section class="section">
-    <h2>
-      <a href="asagao-wellness.html">
-        ASAGAO WELLNESS
-      </a>
-    </h2>
+    <section class="section">
+      <h2>
+        <a href="asagao-sustainability.html">
+          ASAGAO Sustainability
+        </a>
+      </h2>
+      <p class="meta">
+        ESG · Sustainability Systems · Green Finance · Ecological Research
+      </p>
+    </section>
 
-    <p class="meta">
-      Quiet Luxury Wellness · Ritual Care · Nervous System Restoration
-    </p>
-  </section>
+    <section class="section">
+      <h2>
+        <a href="asagao-wellness.html">
+          ASAGAO Wellness
+        </a>
+      </h2>
+      <p class="meta">
+        Quiet Luxury Wellness · Ritual Care · Nervous System Restoration
+      </p>
+    </section>
 
-  <section class="section">
-    <h2>
-      <a href="asagao-theatre.html">
-        ASAGAO THEATRE
-      </a>
-    </h2>
+    <section class="section">
+      <h2>
+        <a href="asagao-theatre.html">
+          ASAGAO Theatre
+        </a>
+      </h2>
+      <p class="meta">
+        Documentary · Cinema · Storytelling · Visual Culture
+      </p>
+    </section>
 
-    <p class="meta">
-      Documentary · Cinema · Storytelling · Visual Culture
-    </p>
-  </section>
+    <section class="section">
+      <h2>
+        <a href="asagao-capital.html">
+          ASAGAO Capital
+        </a>
+      </h2>
+      <p class="meta">
+        Economics · Investment · Information Studies · Financial Systems
+      </p>
+    </section>
+  </main>
 
-  <section class="section">
-    <h2>
-      <a href="asagao-capital.html">
-        ASAGAO CAPITAL
-      </a>
-    </h2>
-
-    <p class="meta">
-      Economics · Investment · Information Studies · Financial Systems
-    </p>
-  </section>
-  
   <footer>
     © ASAGAO Ecosystem · Cecilia ESG · NOW
   </footer>
-
 
 </body>
 
