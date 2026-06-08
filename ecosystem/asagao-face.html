@@ -2,38 +2,48 @@
 <html lang="en">
 
 <head>
-
-  <meta charset="UTF-8">
-
+  <meta charset="UTF-8" />
   <title>Facial Ritual · ASAGAO WELLNESS</title>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
+    :root {
+      --text: #222;
+      --muted: #555;
+      --link: #444;
+      --border: rgba(0, 0, 0, 0.08);
+      --max: 960px;
+    }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      max-width: 960px;
+      max-width: var(--max);
       margin: 50px auto;
       padding: 0 24px;
       background: #fff;
-      color: #222;
+      color: var(--text);
       line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
     nav {
-      margin-bottom: 3em;
+      margin-bottom: 3.2em;
+      font-size: 0.95em;
     }
 
     nav a {
-      margin-right: 18px;
+      margin-right: 15px;
       text-decoration: none;
-      color: #444;
-      font-size: 0.95em;
+      color: var(--link);
     }
 
     nav a:hover {
       text-decoration: underline;
+    }
+
+    nav a.current {
+      font-weight: 600;
     }
 
     h1 {
@@ -73,71 +83,133 @@
       margin-top: 0.8em;
     }
 
-  </style>
+    .back-link {
+      margin-top: 4em;
+      padding-top: 2em;
+      border-top: 1px solid var(--border);
+    }
 
+    .back-link a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 4em;
+      padding-top: 2em;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        margin: 40px auto;
+        padding: 0 20px 80px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin-right: 12px;
+        margin-bottom: 10px;
+      }
+
+      h1 {
+        font-size: 3em;
+      }
+
+      .gallery {
+        gap: 48px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<nav>
-  <a href="../index.html">About</a>
-  <a href="./">ASAGAO Ecosystem</a>
-  <a href="../lectures.html">Lectures</a>
-  <a href="../contact.html">Contact</a>
-</nav>
+  <nav aria-label="Primary navigation">
+    <a href="../index.html">About</a>
 
-<h1>02 · Facial Ritual</h1>
+    <a href="index.html" class="current">Ecosystem</a>
 
-<p class="meta">
-  ASAGAO WELLNESS · Face · Jaw · Sensory Softening
-</p>
+    <a href="https://cecilia--studio.blogspot.com/"
+       target="_blank"
+       rel="noopener noreferrer">Journal</a>
 
-<div class="intro">
+    <a href="../lectures.html">Learning</a>
 
-  <p>
-    The Facial Ritual focuses on softening facial tension,
-    releasing jaw tightness,
-    calming sensory overload,
-    and restoring a naturally relaxed expression through slow therapeutic touch.
-  </p>
+    <a href="../testimonials.html">Testimonials</a>
 
-  <p>
-    Inspired by Eastern healing philosophy and quiet luxury wellness,
-    the ritual supports emotional grounding,
-    nervous system regulation,
-    breathing rhythm,
-    and deep restorative calm.
-  </p>
+    <a href="../contact.html">Contact</a>
+  </nav>
 
-</div>
+  <main>
 
-<div class="gallery">
+    <h1>02 · Facial Ritual</h1>
 
-  <div class="gallery-item">
-    <img src="../images/facial-ritual-01.png" alt="Facial Ritual 01">
-  </div>
+    <p class="meta">
+      ASAGAO WELLNESS · Face · Jaw · Sensory Softening
+    </p>
 
-  <div class="gallery-item">
-    <img src="../images/facial-ritual-02.png" alt="Facial Ritual 02">
-  </div>
+    <div class="intro">
+      <p>
+        The Facial Ritual focuses on softening facial tension,
+        releasing jaw tightness,
+        calming sensory overload,
+        and restoring a naturally relaxed expression through slow therapeutic touch.
+      </p>
 
-  <div class="gallery-item">
-    <img src="../images/facial-ritual-03.png" alt="Facial Ritual 03">
-  </div>
+      <p>
+        Inspired by Eastern healing philosophy and quiet luxury wellness,
+        the ritual supports emotional grounding,
+        nervous system regulation,
+        breathing rhythm,
+        and deep restorative calm.
+      </p>
+    </div>
 
-    <div class="gallery-item">
-    <img src="../images/facial-ritual-04.png" alt="Facial Ritual 04">
-  </div>
+    <div class="gallery">
 
-  <div class="gallery-item">
-    <img src="../images/facial-ritual-05.png" alt="Facial Ritual 05">
-  </div>
+      <div class="gallery-item">
+        <img src="../images/facial-ritual-01.png" alt="Facial Ritual 01">
+      </div>
 
-  <div class="gallery-item">
-    <img src="../images/facial-ritual-06.png" alt="Facial Ritual 06">
-  </div>
+      <div class="gallery-item">
+        <img src="../images/facial-ritual-02.png" alt="Facial Ritual 02">
+      </div>
 
-</div>
+      <div class="gallery-item">
+        <img src="../images/facial-ritual-03.png" alt="Facial Ritual 03">
+      </div>
+
+      <div class="gallery-item">
+        <img src="../images/facial-ritual-04.png" alt="Facial Ritual 04">
+      </div>
+
+      <div class="gallery-item">
+        <img src="../images/facial-ritual-05.png" alt="Facial Ritual 05">
+      </div>
+
+      <div class="gallery-item">
+        <img src="../images/facial-ritual-06.png" alt="Facial Ritual 06">
+      </div>
+
+    </div>
+
+    <p class="back-link">
+      <a href="asagao-wellness.html">← Back to ASAGAO Wellness</a>
+    </p>
+
+  </main>
+
+  <footer>
+    © ASAGAO Wellness · Cecilia ESG · NOW
+  </footer>
 
 </body>
+
 </html>
