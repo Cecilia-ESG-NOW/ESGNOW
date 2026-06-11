@@ -41,8 +41,7 @@
       font-size: 0.95em;
     }
 
-    nav a:hover,
-    nav a.current {
+    nav a:hover {
       color: var(--hover);
     }
 
@@ -60,6 +59,15 @@
       font-size: 1.5em;
       font-weight: 600;
       letter-spacing: -0.5px;
+    }
+
+    h2 a {
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    h2 a:hover {
+      opacity: 0.6;
     }
 
     h3 {
@@ -90,6 +98,16 @@
       line-height: 1.7;
     }
 
+    .caption a {
+      color: var(--soft-text);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .caption a:hover {
+      color: var(--hover);
+    }
+
     .media {
       width: 100%;
       margin: 3em 0 1em;
@@ -116,42 +134,14 @@
       margin-top: 2.5em;
     }
 
-    .category-card {
-      padding: 1.8em 0;
-      border-top: 1px solid var(--line);
-    }
-
-    .category-card:last-child {
-      border-bottom: 1px solid var(--line);
-    }
-
-    .category-card h2 {
-      margin-top: 0;
-      margin-bottom: 0.25em;
-      font-size: 1.55em;
-      font-weight: 600;
-      letter-spacing: -0.4px;
-    }
-
-    .category-card h2 a {
-      text-decoration: none;
-      color: var(--text);
-    }
-
-    .category-card h2 a:hover {
-      opacity: 0.6;
-    }
-
-    .category-card p {
+    .category-links p {
       max-width: 680px;
-      margin-bottom: 0;
     }
 
     .back-link {
       margin-top: 4em;
       padding-top: 2em;
       border-top: 1px solid var(--line);
-      font-size: 0.95em;
     }
 
     .back-link a {
@@ -179,16 +169,8 @@
         margin-bottom: 10px;
       }
 
-      h1 {
-        letter-spacing: -1.5px;
-      }
-
       h2 {
         margin-top: 2.4em;
-      }
-
-      .category-card h2 {
-        font-size: 1.32em;
       }
     }
   </style>
@@ -196,14 +178,21 @@
 
 <body>
 
-  <nav aria-label="Primary navigation">
-    <a href="../index.html">About</a>
-    <a href="index.html" class="current">Ecosystem</a>
-    <a href="https://cecilia--studio.blogspot.com/" target="_blank" rel="noopener noreferrer">Journal</a>
-    <a href="../lectures.html">Learning</a>
-    <a href="../testimonials.html">Testimonials</a>
-    <a href="../contact.html">Contact</a>
-  </nav>
+<nav aria-label="Primary navigation">
+  <a href="../index.html">About</a>
+
+  <a href="index.html" class="current">Ecosystem</a>
+
+  <a href="https://cecilia--studio.blogspot.com/"
+     target="_blank"
+     rel="noopener noreferrer">Journal</a>
+
+  <a href="../lectures.html">Learning</a>
+
+  <a href="../testimonials.html">Testimonials</a>
+
+  <a href="../contact.html">Contact</a>
+</nav>
 
   <main>
 
@@ -247,81 +236,66 @@
     </p>
 
     <section>
-
       <h2>ASAGAO Capital Categories</h2>
 
       <div class="category-links">
 
-        <div class="category-card">
-          <h2><a href="gmat-30-day-plan.html">01 · Business School Preparation</a></h2>
-          <h3>Management Education · Academic Pathway · Professional Foundation</h3>
-          <p>
-            A structured learning path for entering business school,
-            developing academic readiness, and building a strong foundation
-            in management, finance, and professional communication.
-          </p>
-        </div>
+        <h2><a href="gmat-30-day-plan.html">01 · Business School Preparation</a></h2>
+        <h3>Management Education · Academic Pathway · Professional Foundation</h3>
+        <p>
+          A structured learning path for entering business school,
+          developing academic readiness, and building a strong foundation
+          in management, finance, and professional communication.
+        </p>
 
-        <div class="category-card">
-          <h2><a href="investment-management.html">02 · Investment Management</a></h2>
-          <h3>Portfolio Thinking · Asset Allocation · Long-term Value</h3>
-          <p>
-            Study of investment principles, portfolio construction,
-            financial markets, valuation logic, and disciplined
-            long-term decision-making.
-          </p>
-        </div>
+        <h2><a href="investment-management.html">02 · Investment Management</a></h2>
+        <h3>Portfolio Thinking · Asset Allocation · Long-term Value</h3>
+        <p>
+          Study of investment principles, portfolio construction,
+          financial markets, valuation logic, and disciplined
+          long-term decision-making.
+        </p>
 
-        <div class="category-card">
-          <h2><a href="financial-accounting.html">03 · Financial Accounting</a></h2>
-          <h3>Financial Statements · Reporting Standards · Business Performance</h3>
-          <p>
-            Understanding how accounting information records, organizes,
-            and communicates the financial position, performance,
-            and cash flows of an organization.
-          </p>
-        </div>
+        <h2><a href="financial-accounting.html">03 · Financial Accounting</a></h2>
+        <h3>Financial Statements · Reporting Standards · Business Performance</h3>
+        <p>
+          Understanding how accounting information records, organizes,
+          and communicates the financial position, performance,
+          and cash flows of an organization.
+        </p>
 
-        <div class="category-card">
-          <h2><a href="risk-management.html">04 · Risk Management</a></h2>
-          <h3>Uncertainty · Financial Risk · Strategic Resilience</h3>
-          <p>
-            A framework for identifying, measuring, interpreting,
-            and managing risks across financial institutions, businesses,
-            markets, and strategic decisions.
-          </p>
-        </div>
+        <h2><a href="risk-management.html">04 · Risk Management</a></h2>
+        <h3>Uncertainty · Financial Risk · Strategic Resilience</h3>
+        <p>
+          A framework for identifying, measuring, interpreting,
+          and managing risks across financial institutions, businesses,
+          markets, and strategic decisions.
+        </p>
 
-        <div class="category-card">
-          <h2><a href="economics.html">05 · Economics</a></h2>
-          <h3>Markets · Incentives · Policy · Resource Allocation</h3>
-          <p>
-            Economic thinking helps explain how individuals, firms,
-            governments, and markets make decisions under scarcity,
-            uncertainty, and institutional constraints.
-          </p>
-        </div>
+        <h2><a href="economics.html">05 · Economics</a></h2>
+        <h3>Markets · Incentives · Policy · Resource Allocation</h3>
+        <p>
+          Economic thinking helps explain how individuals, firms,
+          governments, and markets make decisions under scarcity,
+          uncertainty, and institutional constraints.
+        </p>
 
-        <div class="category-card">
-          <h2><a href="business-law.html">06 · Business Law</a></h2>
-          <h3>Legal Structure · Contracts · Governance · Compliance</h3>
-          <p>
-            Business law provides the legal foundation for contracts,
-            organizations, rights, obligations, governance, compliance,
-            and responsible commercial activity.
-          </p>
-        </div>
+        <h2><a href="business-law.html">06 · Business Law</a></h2>
+        <h3>Legal Structure · Contracts · Governance · Compliance</h3>
+        <p>
+          Business law provides the legal foundation for contracts,
+          organizations, rights, obligations, governance, compliance,
+          and responsible commercial activity.
+        </p>
 
       </div>
-
     </section>
 
-    <p class="back-link">
-      <a href="index.html">← Back to ASAGAO Ecosystem</a>
-    </p>
+  <p class="back-link">
+    <a href="index.html">← Back to ASAGAO Ecosystem</a>
+  </p>
 
   </main>
 
 </body>
-
 </html>
