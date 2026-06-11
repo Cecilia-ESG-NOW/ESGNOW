@@ -1,183 +1,396 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
 
   <title>ASAGAO Capital · Cecilia ESG · NOW</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
+    :root {
+      --text: #222;
+      --soft-text: #666;
+      --light-text: #888;
+      --line: #e8e8e8;
+      --hover: #000;
+      --bg: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      max-width: 760px;
-      margin: 60px auto;
-      padding: 0 24px;
-      line-height: 1.8;
-      color: #222;
-      background: #fff;
+      max-width: 820px;
+      margin: 72px auto;
+      padding: 0 28px 120px;
+      line-height: 1.9;
+      color: var(--text);
+      background: var(--bg);
     }
 
     nav {
-      margin-bottom: 3em;
+      margin-bottom: 4em;
     }
 
     nav a {
-      margin-right: 18px;
+      margin-right: 22px;
       text-decoration: none;
-      color: #444;
+      color: var(--soft-text);
       font-size: 0.95em;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      color: var(--hover);
     }
 
     h1 {
-      margin-bottom: 0.35em;
-      font-size: 3em;
+      font-size: clamp(2.8rem, 6vw, 4.2rem);
       font-weight: 700;
-      letter-spacing: -1px;
-    }
-
-    .ecosystem-meta {
-      color: #666;
-      font-size: 1.05em;
-      margin-bottom: 4em;
+      letter-spacing: -2px;
+      margin-bottom: 0.35em;
+      line-height: 1.05;
     }
 
     h2 {
-      margin-top: 2.5em;
-      margin-bottom: 0.6em;
-      font-size: 2em;
-      font-weight: 700;
-    }
-
-    h3 {
-      margin-top: 1.2em;
-      color: #555;
-      font-size: 1.1em;
+      margin-top: 3em;
+      margin-bottom: 0.5em;
+      font-size: 1.5em;
+      font-weight: 600;
+      letter-spacing: -0.5px;
     }
 
     h2 a {
       text-decoration: none;
-      color: #222;
-      transition: color 0.2s ease;
+      color: var(--text);
     }
 
     h2 a:hover {
-      color: #777;
+      opacity: 0.6;
     }
 
-    .meta {
-      font-size: 0.95em;
-      color: #777;
-      margin-bottom: 2.5em;
+    h3 {
+      margin-top: 0.2em;
+      margin-bottom: 0.8em;
+      color: var(--soft-text);
+      font-size: 1.02em;
+      font-weight: 500;
     }
 
     p {
-      margin-bottom: 1.2em;
+      margin-bottom: 1.4em;
+      color: #333;
+    }
+
+    .meta {
+      color: var(--light-text);
+      font-size: 0.92em;
+      letter-spacing: 0.3px;
+      margin-bottom: 2.2em;
+    }
+
+    .caption {
+      font-size: 0.86em;
+      color: var(--light-text);
+      margin-top: 0.8em;
+      margin-bottom: 2.2em;
+      line-height: 1.7;
+    }
+
+    .caption a {
+      color: var(--soft-text);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .caption a:hover {
+      color: var(--hover);
+    }
+
+    .media {
+      width: 100%;
+      margin: 3em 0 1em;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #f5f5f5;
+    }
+
+    .media iframe {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      display: block;
+      border: 0;
     }
 
     section {
-      margin-top: 4em;
+      margin-top: 5em;
+      padding-top: 2em;
+      border-top: 1px solid var(--line);
     }
 
     .category-links {
-      margin-top: 2em;
+      margin-top: 2.5em;
+    }
+
+    .category-card {
+      padding: 1.8em 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .category-card:last-child {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .category-card h2 {
+      margin-top: 0;
+      margin-bottom: 0.25em;
+      font-size: 1.55em;
+      font-weight: 600;
+      letter-spacing: -0.4px;
+    }
+
+    .category-card h2 a {
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .category-card h2 a:hover {
+      opacity: 0.6;
+    }
+
+    .category-card p {
+      max-width: 680px;
+      margin-bottom: 0;
+      color: #333;
+    }
+
+    .back-link {
+      margin-top: 4em;
+      padding-top: 2em;
+      border-top: 1px solid var(--line);
+      font-size: 0.95em;
+    }
+
+    .back-link a {
+      color: var(--soft-text);
+      text-decoration: none;
+    }
+
+    .back-link a:hover {
+      color: var(--hover);
+    }
+
+    @media (max-width: 768px) {
+      body {
+        margin: 48px auto;
+        padding: 0 20px 80px;
+        line-height: 1.85;
+      }
+
+      nav {
+        margin-bottom: 3em;
+      }
+
+      nav a {
+        display: inline-block;
+        margin-bottom: 10px;
+      }
+
+      h1 {
+        letter-spacing: -1.5px;
+      }
+
+      h2 {
+        margin-top: 2.4em;
+      }
+
+      .category-card h2 {
+        font-size: 1.32em;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<nav>
-  <a href="../index.html">About</a>
-  <a href="./">ASAGAO Ecosystem</a>
-  <a href="../lectures.html">Lectures</a>
-  <a href="../contact.html">Contact</a>
-</nav>
+  <nav aria-label="Primary navigation">
+    <a href="../index.html">About</a>
 
-<h1>ASAGAO CAPITAL</h1>
+    <a href="index.html" class="current">Ecosystem</a>
 
-<p class="ecosystem-meta">
-  Economics · Investment · Information Studies · Financial Systems
-</p>
+    <a
+      href="https://cecilia--studio.blogspot.com/"
+      target="_blank"
+      rel="noopener noreferrer">
+      Journal
+    </a>
 
-<h2>Capital, Knowledge, and Strategic Decision-Making</h2>
+    <a href="../lectures.html">Learning</a>
 
-<p class="meta">
-  Business Education · Investment Management · Financial Accounting · Risk Management · Economics · Business Law
-</p>
+    <a href="../testimonials.html">Testimonials</a>
 
-<p>
-  ASAGAO Capital explores the relationship between capital systems, organizational decision-making, and knowledge structures.
+    <a href="../contact.html">Contact</a>
+  </nav>
 
-</p>
+  <main>
 
-<p>
-  The project approaches capital not merely as money, but as a system shaped by knowledge, discipline, judgment, responsibility, and long-term strategic thinking.
-</p>
+    <h1>ASAGAO CAPITAL</h1>
 
-<p>
-  Through business education, financial analysis, economic reasoning, and legal awareness, ASAGAO Capital examines how organizations create value, allocate resources, manage risk, and build sustainable institutional capacity over time.
-</p>
+    <p class="meta">
+      Economics · Investment · Information Studies · Financial Systems
+    </p>
 
-<section>
+    <div class="media">
+      <iframe
+        src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+        title="ASAGAO Capital Introduction"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+    </div>
 
-<h2>ASAGAO Capital Categories</h2>
+    <p class="caption">
+      Capital · Knowledge · Strategy · Long-term Decision-Making
+    </p>
 
-<div class="category-links">
+    <p>
+      ASAGAO Capital explores the relationship between capital systems,
+      organizational decision-making, financial knowledge, and strategic thinking.
+    </p>
 
-  <h2><a href="gmat-30-day-plan.html">1. Business School Preparation</a></h2>
-  <h3>Management Education · Academic Pathway · Professional Foundation</h3>
-  <p>
-    A structured learning path for entering business school, developing academic readiness,
-    and building a strong foundation in management, finance, and professional communication.
-  </p>
+    <p>
+      The project approaches capital not merely as money, but as a system shaped
+      by knowledge, discipline, judgment, responsibility, institutional design,
+      and long-term strategic reasoning.
+    </p>
 
-  <h2><a href="investment-management.html">2. Investment Management</a></h2>
-  <h3>Portfolio Thinking · Asset Allocation · Long-term Value</h3>
-  <p>
-    Study of investment principles, portfolio construction, financial markets,
-    valuation logic, and disciplined long-term decision-making.
-  </p>
+    <p>
+      Through business education, financial analysis, economic reasoning,
+      investment management, legal awareness, and risk interpretation,
+      ASAGAO Capital examines how organizations create value, allocate resources,
+      manage uncertainty, and build sustainable institutional capacity over time.
+    </p>
 
-  <h2><a href="financial-accounting.html">3. Financial Accounting</a></h2>
-  <h3>Financial Statements · Reporting Standards · Business Performance</h3>
-  <p>
-    Understanding how accounting information records, organizes, and communicates
-    the financial position, performance, and cash flows of an organization.
-  </p>
+    <section>
 
-  <h2><a href="risk-management.html">4. Risk Management</a></h2>
-  <h3>Uncertainty · Financial Risk · Strategic Resilience</h3>
-  <p>
-    A framework for identifying, measuring, interpreting, and managing risks
-    across financial institutions, businesses, markets, and strategic decisions.
-  </p>
+      <h2>ASAGAO Capital Categories</h2>
 
-  <h2><a href="economics.html">5. Economics</a></h2>
-  <h3>Markets · Incentives · Policy · Resource Allocation</h3>
-  <p>
-    Economic thinking helps explain how individuals, firms, governments,
-    and markets make decisions under scarcity, uncertainty, and institutional constraints.
-  </p>
+      <div class="category-links">
 
-  <h2><a href="business-law.html">6. Business Law</a></h2>
-  <h3>Legal Structure · Contracts · Governance · Compliance</h3>
-  <p>
-    Business law provides the legal foundation for contracts, organizations,
-    rights, obligations, governance, compliance, and responsible commercial activity.
-  </p>
+        <div class="category-card">
+          <h2>
+            <a href="gmat-30-day-plan.html">
+              01 · Business School Preparation
+            </a>
+          </h2>
 
-</div>
+          <h3>Management Education · Academic Pathway · Professional Foundation</h3>
 
-</section>
+          <p>
+            A structured learning path for entering business school,
+            developing academic readiness, and building a strong foundation
+            in management, finance, and professional communication.
+          </p>
+        </div>
 
-<p class="back-link">
-  <a href="./">← Back to ASAGAO Ecosystem</a>
-</p>
+        <div class="category-card">
+          <h2>
+            <a href="investment-management.html">
+              02 · Investment Management
+            </a>
+          </h2>
+
+          <h3>Portfolio Thinking · Asset Allocation · Long-term Value</h3>
+
+          <p>
+            Study of investment principles, portfolio construction,
+            financial markets, valuation logic, and disciplined
+            long-term decision-making.
+          </p>
+        </div>
+
+        <div class="category-card">
+          <h2>
+            <a href="financial-accounting.html">
+              03 · Financial Accounting
+            </a>
+          </h2>
+
+          <h3>Financial Statements · Reporting Standards · Business Performance</h3>
+
+          <p>
+            Understanding how accounting information records, organizes,
+            and communicates the financial position, performance,
+            and cash flows of an organization.
+          </p>
+        </div>
+
+        <div class="category-card">
+          <h2>
+            <a href="risk-management.html">
+              04 · Risk Management
+            </a>
+          </h2>
+
+          <h3>Uncertainty · Financial Risk · Strategic Resilience</h3>
+
+          <p>
+            A framework for identifying, measuring, interpreting,
+            and managing risks across financial institutions, businesses,
+            markets, and strategic decisions.
+          </p>
+        </div>
+
+        <div class="category-card">
+          <h2>
+            <a href="economics.html">
+              05 · Economics
+            </a>
+          </h2>
+
+          <h3>Markets · Incentives · Policy · Resource Allocation</h3>
+
+          <p>
+            Economic thinking helps explain how individuals, firms,
+            governments, and markets make decisions under scarcity,
+            uncertainty, and institutional constraints.
+          </p>
+        </div>
+
+        <div class="category-card">
+          <h2>
+            <a href="business-law.html">
+              06 · Business Law
+            </a>
+          </h2>
+
+          <h3>Legal Structure · Contracts · Governance · Compliance</h3>
+
+          <p>
+            Business law provides the legal foundation for contracts,
+            organizations, rights, obligations, governance, compliance,
+            and responsible commercial activity.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <p class="back-link">
+      <a href="index.html">← Back to ASAGAO Ecosystem</a>
+    </p>
+
+  </main>
+
 </body>
+
 </html>
+```
