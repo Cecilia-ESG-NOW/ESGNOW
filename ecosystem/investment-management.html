@@ -3,104 +3,198 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Investment Management · ASAGAO Capital</title>
+
+  <title>Derivatives · ASAGAO Capital</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <meta
+    name="description"
+    content="ASAGAO Capital lecture materials on derivatives, forward contracts, futures contracts, options, hedging, speculation, arbitrage, and risk management."
+  >
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      max-width: 820px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      max-width: 860px;
       margin: 60px auto;
-      padding: 0 24px;
+      padding: 0 24px 60px;
       line-height: 1.8;
       color: #222;
       background: #fff;
     }
 
     nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
       margin-bottom: 3em;
+      padding-bottom: 1.2em;
+      border-bottom: 1px solid #e5e5e5;
     }
 
     nav a {
-      margin-right: 18px;
       text-decoration: none;
       color: #444;
       font-size: 0.95em;
     }
 
     nav a:hover {
+      color: #000;
       text-decoration: underline;
     }
 
     h1 {
-      font-size: 3em;
-      margin-bottom: 0.35em;
+      margin: 0 0 0.3em;
+      font-size: clamp(2.4em, 7vw, 3.2em);
+      line-height: 1.15;
       font-weight: 700;
-      letter-spacing: -1px;
-    }
-
-    .meta {
-      color: #666;
-      font-size: 1.05em;
-      margin-bottom: 3em;
+      letter-spacing: -1.2px;
     }
 
     h2 {
-      margin-top: 2.5em;
+      margin-top: 2.6em;
+      margin-bottom: 0.8em;
       font-size: 1.8em;
+      line-height: 1.3;
       font-weight: 700;
     }
 
     p {
-      margin-bottom: 1.2em;
+      margin: 0 0 1.2em;
     }
 
     ul {
-      padding-left: 1.5em;
-      margin-bottom: 2em;
+      padding-left: 1.4em;
+      margin: 0 0 2em;
     }
 
     li {
-      margin-bottom: 0.5em;
+      margin-bottom: 0.65em;
+    }
+
+    .meta {
+      margin-bottom: 2.5em;
+      color: #666;
+      font-size: 1.05em;
+    }
+
+    .intro {
+      font-size: 1.08em;
+    }
+
+    .section-intro {
+      color: #555;
+      margin-bottom: 1.5em;
+    }
+
+    .lecture-list {
+      display: grid;
+      gap: 22px;
+      margin-top: 1.5em;
     }
 
     .link-card {
       display: block;
-      padding: 22px 24px;
-      margin: 22px 0;
+      padding: 24px 26px;
       border: 1px solid #ddd;
-      border-radius: 12px;
+      border-radius: 14px;
       text-decoration: none;
       color: #222;
       background: #fafafa;
-      transition: background 0.2s ease, border-color 0.2s ease;
+      transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
     }
 
     .link-card:hover {
-      background: #f2f2f2;
+      transform: translateY(-2px);
+      background: #fff;
       border-color: #bbb;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
     }
 
-    .link-card h2 {
-      margin: 0 0 0.4em 0;
-      font-size: 1.6em;
+    .lecture-number {
+      display: inline-block;
+      margin-bottom: 0.7em;
+      color: #777;
+      font-size: 0.82em;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .link-card h3 {
+      margin: 0 0 0.65em;
+      font-size: 1.5em;
+      line-height: 1.35;
     }
 
     .link-card p {
-      margin: 0 0 0.8em 0;
-      color: #666;
+      margin: 0 0 0.9em;
+      color: #5f5f5f;
     }
 
     .open-link {
+      margin-bottom: 0 !important;
+      color: #222 !important;
       font-weight: 600;
-      color: #222;
+    }
+
+    .principle-box {
+      margin-top: 1.5em;
+      padding: 24px 26px;
+      border-left: 4px solid #222;
+      background: #f7f7f7;
+    }
+
+    .principle-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    footer {
+      margin-top: 4em;
+      padding-top: 1.5em;
+      border-top: 1px solid #e5e5e5;
+      color: #777;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        margin: 32px auto;
+        padding: 0 18px 40px;
+      }
+
+      nav {
+        margin-bottom: 2.2em;
+      }
+
+      h2 {
+        margin-top: 2.2em;
+        font-size: 1.55em;
+      }
+
+      .link-card {
+        padding: 20px;
+      }
+
+      .link-card h3 {
+        font-size: 1.3em;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <nav>
+  <nav aria-label="Main navigation">
     <a href="../index.html">About</a>
     <a href="./">ASAGAO Ecosystem</a>
     <a href="asagao-capital.html">ASAGAO Capital</a>
@@ -108,85 +202,191 @@
     <a href="../contact.html">Contact</a>
   </nav>
 
-  <h1>Investment Management</h1>
+  <main>
 
-  <p class="meta">
-    ASAGAO Capital · Portfolio Thinking · Asset Allocation · Long-term Value
-  </p>
+    <header>
+      <h1>Derivatives</h1>
 
-  <p>
-    This section focuses on investment management, financial markets, portfolio construction,
-    asset allocation, valuation logic, and disciplined long-term decision-making.
-  </p>
+      <p class="meta">
+        ASAGAO Capital · Forwards · Futures · Options · Hedging · Speculation · Arbitrage
+      </p>
 
-  <p>
-    The purpose is to build a structured understanding of how financial instruments work,
-    how risks are priced, and how investors use different tools to manage uncertainty,
-    return, liquidity, and exposure.
-  </p>
+      <p class="intro">
+        This section introduces the structure, valuation, and economic functions of
+        derivative instruments. The lectures examine how forward contracts, futures
+        contracts, and options are used to transfer risk, manage market exposure,
+        discover prices, and support financial decision-making.
+      </p>
 
-  <h2>Lecture Materials</h2>
+      <p class="intro">
+        The objective is to develop a systematic understanding of derivative markets,
+        contract specifications, payoff structures, no-arbitrage relationships,
+        margin systems, clearing mechanisms, and the roles of hedgers, speculators,
+        and arbitrageurs.
+      </p>
+    </header>
 
-  <a class="link-card"
-     href="https://cecilia--studio.blogspot.com/2026/07/derivative-instruments-1.html"
-     target="_blank"
-     rel="noopener noreferrer">
-    <h2>Lecture 1: Introduction to Derivatives</h2>
-    <p>
-      Introduction to derivative instruments, basic concepts, market participants,
-      risk transfer, hedging, speculation, and the role of financial derivatives
-      in modern capital markets.
-    </p>
-    <p class="open-link">Open lecture →</p>
-  </a>
+    <section aria-labelledby="lecture-materials">
 
-  <a class="link-card"
-     href="https://cecilia--studio.blogspot.com/2026/07/derivative-instruments-2-forward.html"
-     target="_blank"
-     rel="noopener noreferrer">
-    <h2>Lecture 2: Futures Contracts, Options Contracts, and Participants in Derivatives Markets</h2>
-    <p>
-      A structured lecture on forward contracts, long and short positions,
-      delivery price, forward price, payoff, no-arbitrage pricing,
-      cost of carry, and forward valuation.
-    </p>
-    <p class="open-link">Open lecture →</p>
-  </a>
+      <h2 id="lecture-materials">Derivative Lecture Materials</h2>
 
-  <a class="link-card"
-     href="https://cecilia--studio.blogspot.com/2026/07/lecture-3-futures-markets-and.html"
-     target="_blank"
-     rel="noopener noreferrer">
-    <h2>Lecture 3: Futures Markets and the Specifications of a Futures Contract</h2>
-    <p>
-      An introduction to futures markets and the standardized features of futures contracts,
-      including contract size, delivery arrangements, delivery months, price quotations,
-      daily price limits, position limits, margin requirements, and the role of the clearinghouse.
-    </p>
-    <p class="open-link">Open lecture →</p>
-  </a>
+      <p class="section-intro">
+        The lectures below progress from the fundamental meaning of derivatives to
+        the operation and standardized design of forward and futures contracts.
+      </p>
 
-  <h2>Learning Focus</h2>
+      <div class="lecture-list">
 
-  <ul>
-    <li>Understand how derivative instruments transfer and transform financial risk.</li>
-    <li>Distinguish between hedging, speculation, arbitrage, and risk management.</li>
-    <li>Learn the pricing logic behind forward contracts and other basic derivatives.</li>
-    <li>Build a foundation for portfolio management and long-term investment strategy.</li>
-  </ul>
+        <a
+          class="link-card"
+          href="https://cecilia--studio.blogspot.com/2026/07/derivative-instruments-1.html"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="lecture-number">Lecture 1</span>
 
-  <h2>Investment Management Principle</h2>
+          <h3>Introduction to Derivative Instruments</h3>
 
-  <p>
-    Investment management is not only about selecting assets. It is about understanding
-    risk, return, time, valuation, market structure, and investor behavior.
-  </p>
+          <p>
+            An introduction to derivative instruments, their underlying assets,
+            basic payoff structures, risk-transfer functions, and their role in
+            modern financial markets.
+          </p>
 
-  <p>
-    A disciplined investor does not simply ask, “What should I buy?”
-    A disciplined investor asks, “What risk am I taking, why am I compensated for it,
-    and how does this position fit into a long-term portfolio system?”
-  </p>
+          <p>
+            The lecture also introduces hedging, speculation, arbitrage, and the
+            main categories of participants in derivatives markets.
+          </p>
+
+          <p class="open-link">Open lecture →</p>
+        </a>
+
+        <a
+          class="link-card"
+          href="https://cecilia--studio.blogspot.com/2026/07/derivative-instruments-2-forward.html"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="lecture-number">Lecture 2</span>
+
+          <h3>Forward Contracts, Options, and Derivatives Market Participants</h3>
+
+          <p>
+            A structured discussion of forward contracts, long and short positions,
+            delivery prices, forward prices, contract payoffs, and settlement at maturity.
+          </p>
+
+          <p>
+            The lecture also examines options contracts and explains how hedgers,
+            speculators, and arbitrageurs use derivatives for different financial purposes.
+          </p>
+
+          <p class="open-link">Open lecture →</p>
+        </a>
+
+        <a
+          class="link-card"
+          href="https://cecilia--studio.blogspot.com/2026/07/lecture-3-futures-markets-and.html"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="lecture-number">Lecture 3</span>
+
+          <h3>Futures Markets and the Specifications of a Futures Contract</h3>
+
+          <p>
+            An introduction to organized futures markets and the standardized
+            specifications that define a futures contract.
+          </p>
+
+          <p>
+            Topics include contract size, underlying asset quality, delivery location,
+            delivery months, price quotations, daily price limits, position limits,
+            margin requirements, marking to market, and the role of the clearinghouse.
+          </p>
+
+          <p class="open-link">Open lecture →</p>
+        </a>
+
+      </div>
+    </section>
+
+    <section aria-labelledby="learning-focus">
+
+      <h2 id="learning-focus">Learning Focus</h2>
+
+      <ul>
+        <li>
+          Understand the economic purpose and basic structure of derivative instruments.
+        </li>
+
+        <li>
+          Distinguish among forward contracts, futures contracts, and options contracts.
+        </li>
+
+        <li>
+          Identify the rights, obligations, and payoff structures of long and short positions.
+        </li>
+
+        <li>
+          Explain how hedgers use derivatives to reduce or manage financial risk.
+        </li>
+
+        <li>
+          Explain how speculators assume market risk in expectation of earning a return.
+        </li>
+
+        <li>
+          Understand how arbitrage supports no-arbitrage pricing and market efficiency.
+        </li>
+
+        <li>
+          Examine the standardized specifications of exchange-traded futures contracts.
+        </li>
+
+        <li>
+          Understand margin accounts, daily settlement, marking to market, and clearinghouses.
+        </li>
+
+        <li>
+          Build a foundation for futures pricing, option valuation, and derivative risk management.
+        </li>
+      </ul>
+
+    </section>
+
+    <section aria-labelledby="derivatives-principle">
+
+      <h2 id="derivatives-principle">Derivative Markets Principle</h2>
+
+      <div class="principle-box">
+
+        <p>
+          Derivatives do not eliminate financial risk. They transfer, redistribute,
+          transform, and price risk through contractual relationships.
+        </p>
+
+        <p>
+          A disciplined derivatives user does not simply ask,
+          “Will the market rise or fall?”
+        </p>
+
+        <p>
+          A disciplined derivatives user asks:
+          “What exposure does this contract create, what risk does it transfer,
+          what obligations arise at maturity, and how does the position affect
+          the overall risk of the portfolio?”
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    ASAGAO Capital · Derivatives Education · Risk, Pricing, and Market Structure
+  </footer>
 
 </body>
 </html>
