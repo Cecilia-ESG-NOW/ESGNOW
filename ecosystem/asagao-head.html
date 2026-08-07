@@ -2,237 +2,759 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <title>Head Ritual · ASAGAO WELLNESS</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>
+    01 · Head Ritual · ASAGAO WELLNESS
+  </title>
+
+  <meta
+    name="description"
+    content="ASAGAO WELLNESS Head Ritual — head acupoint reference, scalp relaxation, nervous system regulation, and restorative therapeutic touch."
+  >
+
 
   <style>
+
     :root {
       --text: #222;
-      --muted: #555;
-      --link: #444;
-      --border: rgba(0, 0, 0, 0.08);
-      --max: 960px;
+      --body-text: #333;
+      --soft-text: #666;
+      --light-text: #888;
+      --line: #e8e8e8;
+      --background: #ffffff;
+      --image-background: #f7f7f5;
+      --hover: #000000;
     }
+
+
+    * {
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      max-width: var(--max);
-      margin: 50px auto;
-      padding: 0 24px;
-      background: #fff;
+
+      max-width: 920px;
+
+      margin: 72px auto;
+
+      padding:
+        0
+        28px
+        120px;
+
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Helvetica,
+        Arial,
+        sans-serif;
+
+      font-size: 16px;
+
+      line-height: 1.9;
+
       color: var(--text);
-      line-height: 1.8;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
+
+      background: var(--background);
+
     }
+
+
+    /* =========================
+       LINKS
+       ========================= */
+
+    a {
+
+      color: inherit;
+
+      transition:
+        color 0.2s ease,
+        opacity 0.2s ease;
+
+    }
+
+
+    a:focus-visible {
+
+      outline: 2px solid var(--text);
+
+      outline-offset: 4px;
+
+      border-radius: 2px;
+
+    }
+
+
+
+    /* =========================
+       NAVIGATION
+       ========================= */
 
     nav {
-      margin-bottom: 3.2em;
-      font-size: 0.95em;
+
+      margin-bottom: 5em;
+
+      line-height: 1.6;
+
     }
+
 
     nav a {
-      margin-right: 15px;
+
+      display: inline-block;
+
+      margin-right: 22px;
+
+      margin-bottom: 10px;
+
+      color: var(--soft-text);
+
       text-decoration: none;
-      color: var(--link);
+
+      font-size: 0.95em;
+
     }
+
 
     nav a:hover {
-      text-decoration: underline;
+
+      color: var(--hover);
+
     }
+
 
     nav a.current {
+
+      color: var(--text);
+
       font-weight: 600;
+
     }
+
+
+
+    /* =========================
+       MAIN TITLE
+       ========================= */
 
     h1 {
-      font-size: 4.2em;
+
+      margin:
+        0
+        0
+        0.35em;
+
+      font-size:
+        clamp(
+          2.8rem,
+          6vw,
+          4.3rem
+        );
+
       font-weight: 700;
+
       letter-spacing: -2px;
-      margin-bottom: 0.5em;
+
       line-height: 1.05;
+
     }
+
+
+    h1 a {
+
+      color: var(--text);
+
+      text-decoration: none;
+
+    }
+
+
+    h1 a:hover {
+
+      opacity: 0.6;
+
+    }
+
+
+
+    /* =========================
+       META
+       ========================= */
 
     .meta {
-      font-size: 1em;
-      color: #777;
-      margin-bottom: 4em;
+
+      margin-top: 0;
+
+      margin-bottom: 3em;
+
+      color: var(--light-text);
+
+      font-size: 0.92em;
+
+      letter-spacing: 0.3px;
+
     }
+
+
+
+    /* =========================
+       INTRODUCTION
+       ========================= */
 
     .intro {
-      max-width: 760px;
-      margin-bottom: 4em;
-      color: #444;
+
+      max-width: 720px;
+
+      margin-bottom: 5em;
+
     }
+
+
+    .intro p {
+
+      margin:
+        0
+        0
+        1.5em;
+
+      color: var(--body-text);
+
+    }
+
+
+
+    /* =========================
+       GALLERY
+       ========================= */
 
     .gallery {
+
       display: grid;
-      gap: 70px;
+
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+      gap:
+        48px
+        28px;
+
+      margin-top: 4em;
+
     }
+
+
+
+    /* Individual image */
+
+    .gallery-item {
+
+      margin: 0;
+
+    }
+
 
     .gallery-item img {
-      width: 100%;
-      height: auto;
+
       display: block;
+
+      width: 100%;
+
+      height: auto;
+
+      background: var(--image-background);
+
+      border-radius: 12px;
+
     }
 
-    .caption {
-      font-size: 0.9em;
-      color: #777;
-      margin-top: 0.8em;
+
+
+    /* Subtle image interaction */
+
+    .gallery-item img {
+
+      transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+
     }
+
+
+    .gallery-item img:hover {
+
+      opacity: 0.96;
+
+      transform: translateY(-2px);
+
+    }
+
+
+
+    /* =========================
+       BACK LINK
+       ========================= */
 
     .back-link {
-      margin-top: 4em;
+
+      margin-top: 7em;
+
       padding-top: 2em;
-      border-top: 1px solid var(--border);
+
+      border-top:
+        1px solid
+        var(--line);
+
     }
+
 
     .back-link a {
-      color: var(--link);
+
+      color: var(--soft-text);
+
       text-decoration: none;
+
     }
+
 
     .back-link a:hover {
-      text-decoration: underline;
+
+      color: var(--hover);
+
     }
 
-    footer {
-      margin-top: 4em;
-      padding-top: 2em;
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      font-size: 0.9em;
-    }
+
+
+    /* =========================
+       TABLET
+       ========================= */
 
     @media (max-width: 768px) {
+
       body {
-        margin: 40px auto;
-        padding: 0 20px 80px;
+
+        margin: 48px auto;
+
+        padding:
+          0
+          20px
+          80px;
+
+        line-height: 1.85;
+
       }
+
+
+      nav {
+
+        margin-bottom: 4em;
+
+      }
+
 
       nav a {
-        display: inline-block;
-        margin-right: 12px;
-        margin-bottom: 10px;
+
+        margin-right: 18px;
+
       }
+
 
       h1 {
-        font-size: 3em;
+
+        letter-spacing: -1.5px;
+
       }
 
-      .gallery {
-        gap: 48px;
+
+      .intro {
+
+        margin-bottom: 4em;
+
       }
+
+
+      .gallery {
+
+        gap:
+          36px
+          20px;
+
+      }
+
+
+      .back-link {
+
+        margin-top: 5em;
+
+      }
+
     }
+
+
+
+    /* =========================
+       MOBILE
+       ========================= */
+
+    @media (max-width: 560px) {
+
+      body {
+
+        margin-top: 36px;
+
+      }
+
+
+      nav {
+
+        margin-bottom: 3.5em;
+
+      }
+
+
+      h1 {
+
+        font-size:
+          clamp(
+            2.4rem,
+            12vw,
+            3.3rem
+          );
+
+      }
+
+
+      .gallery {
+
+        grid-template-columns: 1fr;
+
+        gap: 36px;
+
+      }
+
+    }
+
   </style>
+
 </head>
+
+
 
 <body>
 
-  <nav aria-label="Primary navigation">
-    <a href="../index.html">About</a>
 
-    <a href="index.html" class="current">Ecosystem</a>
+  <!-- =========================
+       NAVIGATION
+       ========================= -->
+
+  <nav aria-label="Primary navigation">
+
+
+    <a href="index.html"
+       class="current"
+       aria-current="page">
+      Ecosystem
+    </a>
+
 
     <a href="https://cecilia--studio.blogspot.com/"
        target="_blank"
-       rel="noopener noreferrer">Journal</a>
+       rel="noopener noreferrer">
+      Journal
+    </a>
 
-    <a href="../lectures.html">Learning</a>
 
-    <a href="../testimonials.html">Testimonials</a>
+    <a href="../lectures.html">
+      Learning
+    </a>
 
-    <a href="../contact.html">Contact</a>
+
+    <a href="../testimonials.html">
+      Testimonials
+    </a>
+
+
+    <a href="../contact.html">
+      Contact
+    </a>
+
+
   </nav>
+
+
+
+  <!-- =========================
+       MAIN CONTENT
+       ========================= -->
 
   <main>
 
-    <h1>01 · Head Ritual</h1>
 
-    <p class="meta">
-      ASAGAO WELLNESS · Head Acupoint Reference · Nervous System Care
-    </p>
+    <!-- HEAD RITUAL TITLE -->
+
+    <header>
+
+
+      <h1>
+
+        <a href="https://cecilia--studio.blogspot.com/"
+           target="_blank"
+           rel="noopener noreferrer">
+
+          01 · Head Ritual
+
+        </a>
+
+      </h1>
+
+
+      <p class="meta">
+
+        ASAGAO WELLNESS ·
+        Head Acupoint Reference ·
+        Nervous System Care
+
+      </p>
+
+
+    </header>
+
+
+
+    <!-- INTRODUCTION -->
 
     <div class="intro">
 
+
       <p>
+
         The Head Ritual focuses on nervous system regulation,
         scalp relaxation, acupoint awareness,
         and sensory restoration through slow therapeutic touch.
+
       </p>
 
+
       <p>
+
         Inspired by Eastern healing philosophy and quiet luxury wellness,
         the ritual supports mental calmness,
         emotional grounding,
         and deep restorative rest.
+
       </p>
 
+
     </div>
+
+
+
+    <!-- =========================
+         HEAD RITUAL GALLERY
+         ========================= -->
 
     <div class="gallery">
 
-      <div class="gallery-item">
-        <img src="../images/head-ritual-01.png" alt="Head Ritual 01">
-      </div>
+
+      <!-- 01 -->
 
       <div class="gallery-item">
-        <img src="../images/head-ritual-02.png" alt="Head Ritual 02">
+
+        <img
+          src="../images/head-ritual-01.png"
+          alt="Head Ritual 01"
+        >
+
       </div>
 
-      <div class="gallery-item">
-        <img src="../images/head-ritual-03.png" alt="Head Ritual 03">
-      </div>
+
+
+      <!-- 02 -->
 
       <div class="gallery-item">
-        <img src="../images/head-ritual-04.png" alt="Head Ritual 04">
+
+        <img
+          src="../images/head-ritual-02.png"
+          alt="Head Ritual 02"
+          loading="lazy"
+        >
+
       </div>
 
-      <div class="gallery-item">
-        <img src="../images/head-ritual-05.png" alt="Head Ritual 05">
-      </div>
+
+
+      <!-- 03 -->
 
       <div class="gallery-item">
-        <img src="../images/head-ritual-06.png" alt="Head Ritual 06">
+
+        <img
+          src="../images/head-ritual-03.png"
+          alt="Head Ritual 03"
+          loading="lazy"
+        >
+
       </div>
 
-      <div class="gallery-item">
-        <img src="../images/head-ritual-07.png" alt="Head Ritual 07">
-      </div>
+
+
+      <!-- 04 -->
 
       <div class="gallery-item">
-        <img src="../images/head-ritual-08.png" alt="Head Ritual 08">
+
+        <img
+          src="../images/head-ritual-04.png"
+          alt="Head Ritual 04"
+          loading="lazy"
+        >
+
       </div>
 
-      <div class="gallery-item">
-        <img src="../images/head-ritual-09.png" alt="Head Ritual 09">
-      </div>
+
+
+      <!-- 05 -->
 
       <div class="gallery-item">
-        <img src="../images/head-ritual-10.png" alt="Head Ritual 10">
+
+        <img
+          src="../images/head-ritual-05.png"
+          alt="Head Ritual 05"
+          loading="lazy"
+        >
+
       </div>
 
-      <div class="gallery-item">
-        <img src="../images/head-ritual-11.png" alt="Head Ritual 11">
-      </div>
+
+
+      <!-- 06 -->
 
       <div class="gallery-item">
-        <img src="../images/head-ritual-12.png" alt="Head Ritual 12">
+
+        <img
+          src="../images/head-ritual-06.png"
+          alt="Head Ritual 06"
+          loading="lazy"
+        >
+
       </div>
+
+
+
+      <!-- 07 -->
+
+      <div class="gallery-item">
+
+        <img
+          src="../images/head-ritual-07.png"
+          alt="Head Ritual 07"
+          loading="lazy"
+        >
+
+      </div>
+
+
+
+      <!-- 08 -->
+
+      <div class="gallery-item">
+
+        <img
+          src="../images/head-ritual-08.png"
+          alt="Head Ritual 08"
+          loading="lazy"
+        >
+
+      </div>
+
+
+
+      <!-- 09 -->
+
+      <div class="gallery-item">
+
+        <img
+          src="../images/head-ritual-09.png"
+          alt="Head Ritual 09"
+          loading="lazy"
+        >
+
+      </div>
+
+
+
+      <!-- 10 -->
+
+      <div class="gallery-item">
+
+        <img
+          src="../images/head-ritual-10.png"
+          alt="Head Ritual 10"
+          loading="lazy"
+        >
+
+      </div>
+
+
+
+      <!-- 11 -->
+
+      <div class="gallery-item">
+
+        <img
+          src="../images/head-ritual-11.png"
+          alt="Head Ritual 11"
+          loading="lazy"
+        >
+
+      </div>
+
+
+
+      <!-- 12 -->
+
+      <div class="gallery-item">
+
+        <img
+          src="../images/head-ritual-12.png"
+          alt="Head Ritual 12"
+          loading="lazy"
+        >
+
+      </div>
+
 
     </div>
 
+
+
+    <!-- =========================
+         BACK
+         ========================= -->
+
     <p class="back-link">
-      <a href="asagao-wellness.html">← Back to ASAGAO Wellness</a>
+
+      <a href="asagao-wellness.html">
+
+        ← Back to ASAGAO Wellness
+
+      </a>
+
     </p>
+
 
   </main>
 
-  <footer>
-    © ASAGAO Wellness · Cecilia ESG · NOW
-  </footer>
 
 </body>
 
