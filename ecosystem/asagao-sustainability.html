@@ -8,9 +8,7 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
 
-  <title>
-    01 · Head Ritual · ASAGAO WELLNESS
-  </title>
+  <title>01 · Head Ritual · ASAGAO WELLNESS</title>
 
   <meta
     name="description"
@@ -19,6 +17,10 @@
 
 
   <style>
+
+    /* ========================================
+       ROOT
+       ======================================== */
 
     :root {
       --text: #222;
@@ -43,7 +45,6 @@
 
 
     body {
-
       max-width: 920px;
 
       margin: 72px auto;
@@ -62,62 +63,49 @@
         sans-serif;
 
       font-size: 16px;
-
       line-height: 1.9;
 
       color: var(--text);
-
       background: var(--background);
-
     }
 
 
-    /* =========================
+
+    /* ========================================
        LINKS
-       ========================= */
+       ======================================== */
 
     a {
-
       color: inherit;
 
       transition:
         color 0.2s ease,
         opacity 0.2s ease;
-
     }
 
 
     a:focus-visible {
-
       outline: 2px solid var(--text);
-
       outline-offset: 4px;
-
       border-radius: 2px;
-
     }
 
 
 
-    /* =========================
+    /* ========================================
        NAVIGATION
-       ========================= */
+       ======================================== */
 
     nav {
-
       margin-bottom: 5em;
-
       line-height: 1.6;
-
     }
 
 
     nav a {
-
       display: inline-block;
 
       margin-right: 22px;
-
       margin-bottom: 10px;
 
       color: var(--soft-text);
@@ -125,79 +113,56 @@
       text-decoration: none;
 
       font-size: 0.95em;
-
     }
 
 
     nav a:hover {
-
       color: var(--hover);
-
     }
 
 
     nav a.current {
-
       color: var(--text);
-
       font-weight: 600;
-
     }
 
 
 
-    /* =========================
+    /* ========================================
        MAIN TITLE
-       ========================= */
+       ======================================== */
 
     h1 {
+      margin: 0 0 0.35em;
 
-      margin:
-        0
-        0
-        0.35em;
-
-      font-size:
-        clamp(
-          2.8rem,
-          6vw,
-          4.3rem
-        );
+      font-size: clamp(2.8rem, 6vw, 4.3rem);
 
       font-weight: 700;
 
       letter-spacing: -2px;
 
       line-height: 1.05;
-
     }
 
 
     h1 a {
-
       color: var(--text);
-
       text-decoration: none;
-
     }
 
 
     h1 a:hover {
-
       opacity: 0.6;
-
     }
 
 
 
-    /* =========================
+    /* ========================================
        META
-       ========================= */
+       ======================================== */
 
     .meta {
-
       margin-top: 0;
-
       margin-bottom: 3em;
 
       color: var(--light-text);
@@ -205,74 +170,79 @@
       font-size: 0.92em;
 
       letter-spacing: 0.3px;
-
     }
 
 
 
-    /* =========================
+    /* ========================================
        INTRODUCTION
-       ========================= */
+       ======================================== */
 
     .intro {
-
       max-width: 720px;
 
       margin-bottom: 5em;
-
     }
 
 
     .intro p {
-
-      margin:
-        0
-        0
-        1.5em;
+      margin: 0 0 1.5em;
 
       color: var(--body-text);
-
     }
 
 
 
-    /* =========================
-       GALLERY
+    /* ========================================
+       HEAD RITUAL GALLERY
+
+       IMPORTANT:
        ONE IMAGE PER ROW
-       ========================= */
+       ======================================== */
 
     .gallery {
+      width: 100%;
 
-      display: grid;
+      display: flex;
 
-      grid-template-columns: 1fr;
+      flex-direction: column;
+
+      align-items: stretch;
 
       gap: 48px;
 
       margin-top: 4em;
-
     }
 
 
 
-    /* Individual image */
+    /* ========================================
+       INDIVIDUAL IMAGE
+       ======================================== */
 
     .gallery-item {
-
-      width: 100%;
-
-      margin: 0;
-
-    }
-
-
-    .gallery-item img {
-
       display: block;
 
       width: 100%;
 
+      max-width: 100%;
+
+      margin: 0;
+
+      padding: 0;
+    }
+
+
+    .gallery-item img {
+      display: block;
+
+      width: 100%;
+
+      max-width: 100%;
+
       height: auto;
+
+      margin: 0;
 
       background: var(--image-background);
 
@@ -281,62 +251,50 @@
       transition:
         opacity 0.25s ease,
         transform 0.25s ease;
-
     }
 
 
     .gallery-item img:hover {
-
       opacity: 0.96;
 
       transform: translateY(-2px);
-
     }
 
 
 
-    /* =========================
+    /* ========================================
        BACK LINK
-       ========================= */
+       ======================================== */
 
     .back-link {
-
       margin-top: 7em;
 
       padding-top: 2em;
 
-      border-top:
-        1px solid
-        var(--line);
-
+      border-top: 1px solid var(--line);
     }
 
 
     .back-link a {
-
       color: var(--soft-text);
 
       text-decoration: none;
-
     }
 
 
     .back-link a:hover {
-
       color: var(--hover);
-
     }
 
 
 
-    /* =========================
+    /* ========================================
        TABLET
-       ========================= */
+       ======================================== */
 
     @media (max-width: 768px) {
 
       body {
-
         margin: 48px auto;
 
         padding:
@@ -345,95 +303,107 @@
           80px;
 
         line-height: 1.85;
-
       }
 
 
       nav {
-
         margin-bottom: 4em;
-
       }
 
 
       nav a {
-
         margin-right: 18px;
-
       }
 
 
       h1 {
-
         letter-spacing: -1.5px;
-
       }
 
 
       .intro {
-
         margin-bottom: 4em;
-
       }
 
 
-      .gallery {
+      /*
+        Still one image per row
+      */
 
-        grid-template-columns: 1fr;
+      .gallery {
+        display: flex;
+
+        flex-direction: column;
 
         gap: 40px;
+      }
 
+
+      .gallery-item {
+        width: 100%;
+      }
+
+
+      .gallery-item img {
+        width: 100%;
+        height: auto;
       }
 
 
       .back-link {
-
         margin-top: 5em;
-
       }
 
     }
 
 
 
-    /* =========================
+    /* ========================================
        MOBILE
-       ========================= */
+       ======================================== */
 
     @media (max-width: 560px) {
 
       body {
-
         margin-top: 36px;
-
       }
 
 
       nav {
-
         margin-bottom: 3.5em;
-
       }
 
 
       h1 {
-
-        font-size:
-          clamp(
-            2.4rem,
-            12vw,
-            3.3rem
-          );
-
+        font-size: clamp(
+          2.4rem,
+          12vw,
+          3.3rem
+        );
       }
 
 
-      .gallery {
+      /*
+        Still one image per row
+      */
 
-        grid-template-columns: 1fr;
+      .gallery {
+        display: flex;
+
+        flex-direction: column;
 
         gap: 36px;
+      }
 
+
+      .gallery-item {
+        width: 100%;
+      }
+
+
+      .gallery-item img {
+        width: 100%;
+        height: auto;
       }
 
     }
@@ -443,13 +413,12 @@
 </head>
 
 
-
 <body>
 
 
-  <!-- =========================
+  <!-- ========================================
        NAVIGATION
-       ========================= -->
+       ======================================== -->
 
   <nav aria-label="Primary navigation">
 
@@ -487,14 +456,16 @@
 
 
 
-  <!-- =========================
+  <!-- ========================================
        MAIN CONTENT
-       ========================= -->
+       ======================================== -->
 
   <main>
 
 
-    <!-- HEAD RITUAL TITLE -->
+    <!-- ========================================
+         HEAD RITUAL TITLE
+         ======================================== -->
 
     <header>
 
@@ -525,7 +496,9 @@
 
 
 
-    <!-- INTRODUCTION -->
+    <!-- ========================================
+         INTRODUCTION
+         ======================================== -->
 
     <div class="intro">
 
@@ -553,15 +526,19 @@
 
 
 
-    <!-- =========================
+    <!-- ========================================
          HEAD RITUAL GALLERY
-         ONE IMAGE PER ROW
-         ========================= -->
+
+         SINGLE COLUMN
+         01 → 12
+         ======================================== -->
 
     <div class="gallery">
 
 
-      <!-- 01 -->
+      <!-- =====================================
+           01
+           ===================================== -->
 
       <div class="gallery-item">
 
@@ -574,7 +551,9 @@
 
 
 
-      <!-- 02 -->
+      <!-- =====================================
+           02
+           ===================================== -->
 
       <div class="gallery-item">
 
@@ -588,7 +567,9 @@
 
 
 
-      <!-- 03 -->
+      <!-- =====================================
+           03
+           ===================================== -->
 
       <div class="gallery-item">
 
@@ -602,7 +583,9 @@
 
 
 
-      <!-- 04 -->
+      <!-- =====================================
+           04
+           ===================================== -->
 
       <div class="gallery-item">
 
@@ -616,7 +599,9 @@
 
 
 
-      <!-- 05 -->
+      <!-- =====================================
+           05
+           ===================================== -->
 
       <div class="gallery-item">
 
@@ -630,7 +615,9 @@
 
 
 
-      <!-- 06 -->
+      <!-- =====================================
+           06
+           ===================================== -->
 
       <div class="gallery-item">
 
@@ -644,7 +631,9 @@
 
 
 
-      <!-- 07 -->
+      <!-- =====================================
+           07
+           ===================================== -->
 
       <div class="gallery-item">
 
@@ -658,7 +647,9 @@
 
 
 
-      <!-- 08 -->
+      <!-- =====================================
+           08
+           ===================================== -->
 
       <div class="gallery-item">
 
@@ -672,7 +663,9 @@
 
 
 
-      <!-- 09 -->
+      <!-- =====================================
+           09
+           ===================================== -->
 
       <div class="gallery-item">
 
@@ -686,7 +679,9 @@
 
 
 
-      <!-- 10 -->
+      <!-- =====================================
+           10
+           ===================================== -->
 
       <div class="gallery-item">
 
@@ -700,7 +695,9 @@
 
 
 
-      <!-- 11 -->
+      <!-- =====================================
+           11
+           ===================================== -->
 
       <div class="gallery-item">
 
@@ -714,7 +711,9 @@
 
 
 
-      <!-- 12 -->
+      <!-- =====================================
+           12
+           ===================================== -->
 
       <div class="gallery-item">
 
@@ -731,9 +730,9 @@
 
 
 
-    <!-- =========================
+    <!-- ========================================
          BACK
-         ========================= -->
+         ======================================== -->
 
     <p class="back-link">
 
