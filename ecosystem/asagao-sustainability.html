@@ -2,41 +2,56 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
 
-  <title>ASAGAO Sustainability · Cecilia ESG · NOW</title>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>
+    01 · Head Ritual · ASAGAO WELLNESS
+  </title>
 
   <meta
     name="description"
-    content="ASAGAO Sustainability explores ecological design, reclaimed textiles, slow production, green finance, and sustainable fashion systems."
-  />
+    content="ASAGAO WELLNESS Head Ritual — head acupoint reference, scalp relaxation, nervous system regulation, and restorative therapeutic touch."
+  >
+
 
   <style>
+
     :root {
       --text: #222;
       --body-text: #333;
       --soft-text: #666;
       --light-text: #888;
       --line: #e8e8e8;
-      --hover: #000;
-      --bg: #fff;
-      --media-bg: #f5f5f5;
+      --background: #ffffff;
+      --image-background: #f7f7f5;
+      --hover: #000000;
     }
+
 
     * {
       box-sizing: border-box;
     }
 
+
     html {
       scroll-behavior: smooth;
     }
 
+
     body {
-      max-width: 820px;
+
+      max-width: 920px;
+
       margin: 72px auto;
-      padding: 0 28px 120px;
+
+      padding:
+        0
+        28px
+        120px;
 
       font-family:
         -apple-system,
@@ -47,613 +62,693 @@
         sans-serif;
 
       font-size: 16px;
+
       line-height: 1.9;
 
       color: var(--text);
-      background: var(--bg);
+
+      background: var(--background);
+
     }
 
+
+    /* =========================
+       LINKS
+       ========================= */
+
     a {
+
+      color: inherit;
+
       transition:
         color 0.2s ease,
         opacity 0.2s ease;
+
     }
 
-    /* Navigation */
+
+    a:focus-visible {
+
+      outline: 2px solid var(--text);
+
+      outline-offset: 4px;
+
+      border-radius: 2px;
+
+    }
+
+
+
+    /* =========================
+       NAVIGATION
+       ========================= */
 
     nav {
-      margin-bottom: 4em;
+
+      margin-bottom: 5em;
+
+      line-height: 1.6;
+
     }
 
+
     nav a {
+
       display: inline-block;
+
       margin-right: 22px;
-      margin-bottom: 8px;
+
+      margin-bottom: 10px;
 
       color: var(--soft-text);
+
       text-decoration: none;
 
       font-size: 0.95em;
+
     }
+
 
     nav a:hover {
+
       color: var(--hover);
+
     }
+
 
     nav a.current {
+
       color: var(--text);
+
       font-weight: 600;
+
     }
 
-    /* Typography */
+
+
+    /* =========================
+       MAIN TITLE
+       ========================= */
 
     h1 {
-      margin: 0 0 0.35em;
 
-      font-size: clamp(2.8rem, 6vw, 4.2rem);
+      margin:
+        0
+        0
+        0.35em;
+
+      font-size:
+        clamp(
+          2.8rem,
+          6vw,
+          4.3rem
+        );
+
       font-weight: 700;
+
       letter-spacing: -2px;
+
       line-height: 1.05;
+
     }
 
-    h2 {
-      margin-top: 3em;
-      margin-bottom: 0.5em;
 
-      font-size: 1.5em;
-      font-weight: 600;
-      letter-spacing: -0.5px;
-      line-height: 1.35;
-    }
+    h1 a {
 
-    h2 a {
       color: var(--text);
+
       text-decoration: none;
+
     }
 
-    h2 a:hover {
+
+    h1 a:hover {
+
       opacity: 0.6;
+
     }
 
-    h3 {
-      margin-top: 0.2em;
-      margin-bottom: 0.8em;
 
-      color: var(--soft-text);
 
-      font-size: 1.02em;
-      font-weight: 500;
-      line-height: 1.6;
-    }
-
-    p {
-      margin-top: 0;
-      margin-bottom: 1.4em;
-
-      color: var(--body-text);
-    }
-
-    /* Intro */
+    /* =========================
+       META
+       ========================= */
 
     .meta {
-      margin-bottom: 2.2em;
+
+      margin-top: 0;
+
+      margin-bottom: 3em;
 
       color: var(--light-text);
 
       font-size: 0.92em;
+
       letter-spacing: 0.3px;
+
     }
 
-    .caption {
-      margin-top: 0.8em;
-      margin-bottom: 2.2em;
 
-      color: var(--light-text);
 
-      font-size: 0.86em;
-      line-height: 1.7;
+    /* =========================
+       INTRODUCTION
+       ========================= */
+
+    .intro {
+
+      max-width: 720px;
+
+      margin-bottom: 5em;
+
     }
 
-    .caption a {
-      color: var(--soft-text);
-      text-decoration: underline;
-      text-underline-offset: 3px;
+
+    .intro p {
+
+      margin:
+        0
+        0
+        1.5em;
+
+      color: var(--body-text);
+
     }
 
-    .caption a:hover {
-      color: var(--hover);
+
+
+    /* =========================
+       GALLERY
+       ONE IMAGE PER ROW
+       ========================= */
+
+    .gallery {
+
+      display: grid;
+
+      grid-template-columns: 1fr;
+
+      gap: 48px;
+
+      margin-top: 4em;
+
     }
 
-    /* Media */
 
-    .media {
+
+    /* Individual image */
+
+    .gallery-item {
+
       width: 100%;
-      margin: 3em 0 1em;
 
-      overflow: hidden;
+      margin: 0;
 
-      background: var(--media-bg);
-      border-radius: 14px;
     }
 
-    .media iframe {
+
+    .gallery-item img {
+
       display: block;
 
       width: 100%;
+
       height: auto;
 
-      aspect-ratio: 16 / 9;
+      background: var(--image-background);
 
-      border: 0;
+      border-radius: 12px;
+
+      transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+
     }
 
-    /* Sections */
 
-    section {
-      margin-top: 5em;
-      padding-top: 2em;
+    .gallery-item img:hover {
 
-      border-top: 1px solid var(--line);
+      opacity: 0.96;
+
+      transform: translateY(-2px);
+
     }
 
-    section > h2:first-child {
-      margin-top: 0;
-    }
 
-    .category-links {
-      margin-top: 2.5em;
-    }
 
-    .category-links h2 {
-      margin-top: 2.8em;
-    }
-
-    .category-links h2:first-child {
-      margin-top: 0;
-    }
-
-    .category-links p {
-      max-width: 680px;
-    }
-
-    /* Back link */
+    /* =========================
+       BACK LINK
+       ========================= */
 
     .back-link {
-      margin-top: 5em;
+
+      margin-top: 7em;
+
       padding-top: 2em;
 
-      border-top: 1px solid var(--line);
+      border-top:
+        1px solid
+        var(--line);
+
     }
+
 
     .back-link a {
+
       color: var(--soft-text);
+
       text-decoration: none;
+
     }
+
 
     .back-link a:hover {
+
       color: var(--hover);
+
     }
 
-    /* Accessibility */
 
-    a:focus-visible {
-      outline: 2px solid var(--text);
-      outline-offset: 4px;
-      border-radius: 2px;
-    }
 
-    /* Mobile */
+    /* =========================
+       TABLET
+       ========================= */
 
     @media (max-width: 768px) {
+
       body {
+
         margin: 48px auto;
-        padding: 0 20px 80px;
+
+        padding:
+          0
+          20px
+          80px;
 
         line-height: 1.85;
+
       }
+
 
       nav {
-        margin-bottom: 3em;
+
+        margin-bottom: 4em;
+
       }
+
 
       nav a {
+
         margin-right: 18px;
+
       }
+
 
       h1 {
+
         letter-spacing: -1.5px;
+
       }
 
-      h2 {
-        margin-top: 2.4em;
+
+      .intro {
+
+        margin-bottom: 4em;
+
       }
 
-      section {
-        margin-top: 4em;
+
+      .gallery {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
       }
 
-      .category-links h2 {
-        margin-top: 2.4em;
+
+      .back-link {
+
+        margin-top: 5em;
+
       }
+
     }
+
+
+
+    /* =========================
+       MOBILE
+       ========================= */
+
+    @media (max-width: 560px) {
+
+      body {
+
+        margin-top: 36px;
+
+      }
+
+
+      nav {
+
+        margin-bottom: 3.5em;
+
+      }
+
+
+      h1 {
+
+        font-size:
+          clamp(
+            2.4rem,
+            12vw,
+            3.3rem
+          );
+
+      }
+
+
+      .gallery {
+
+        grid-template-columns: 1fr;
+
+        gap: 36px;
+
+      }
+
+    }
+
   </style>
+
 </head>
+
+
 
 <body>
 
+
+  <!-- =========================
+       NAVIGATION
+       ========================= -->
+
   <nav aria-label="Primary navigation">
 
-    <a href="../index.html">
-      About
-    </a>
 
-    <a
-      href="index.html"
-      class="current"
-      aria-current="page">
+    <a href="index.html"
+       class="current"
+       aria-current="page">
       Ecosystem
     </a>
 
-    <a
-      href="https://cecilia--studio.blogspot.com/"
-      target="_blank"
-      rel="noopener noreferrer">
+
+    <a href="https://cecilia--studio.blogspot.com/"
+       target="_blank"
+       rel="noopener noreferrer">
       Journal
     </a>
+
 
     <a href="../lectures.html">
       Learning
     </a>
 
+
     <a href="../testimonials.html">
       Testimonials
     </a>
+
 
     <a href="../contact.html">
       Contact
     </a>
 
+
   </nav>
 
 
+
+  <!-- =========================
+       MAIN CONTENT
+       ========================= -->
+
   <main>
+
+
+    <!-- HEAD RITUAL TITLE -->
 
     <header>
 
+
       <h1>
-        ASAGAO SUSTAINABILITY
+
+        <a href="https://cecilia--studio.blogspot.com/"
+           target="_blank"
+           rel="noopener noreferrer">
+
+          01 · Head Ritual
+
+        </a>
+
       </h1>
 
+
       <p class="meta">
-        ESG · Sustainability Systems · Green Finance · Ecological Research
+
+        ASAGAO WELLNESS ·
+        Head Acupoint Reference ·
+        Nervous System Care
+
       </p>
+
 
     </header>
 
 
-    <div class="media">
 
-      <iframe
-        src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-        title="ASAGAO Sustainability Featured Project"
-        loading="lazy"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen>
-      </iframe>
+    <!-- INTRODUCTION -->
+
+    <div class="intro">
+
+
+      <p>
+
+        The Head Ritual focuses on nervous system regulation,
+        scalp relaxation, acupoint awareness,
+        and sensory restoration through slow therapeutic touch.
+
+      </p>
+
+
+      <p>
+
+        Inspired by Eastern healing philosophy and quiet luxury wellness,
+        the ritual supports mental calmness,
+        emotional grounding,
+        and deep restorative rest.
+
+      </p>
+
 
     </div>
 
 
-    <p class="caption">
-      Material transformation · Slow production · Ecological aesthetics
-    </p>
+
+    <!-- =========================
+         HEAD RITUAL GALLERY
+         ONE IMAGE PER ROW
+         ========================= -->
+
+    <div class="gallery">
 
 
-    <p>
-      ASAGAO Sustainability explores ecological design, reclaimed textiles,
-      slow production, green finance, and sustainable fashion systems.
-    </p>
+      <!-- 01 -->
 
-    <p>
-      It is designed as a research space for material transformation,
-      circular design, environmental responsibility, and long-term ecological aesthetics.
-    </p>
+      <div class="gallery-item">
 
-    <p>
-      Sustainability is framed not only as an abstract objective,
-      but as a practice embedded in everyday material decisions,
-      cultural responsibility, ecological awareness, and long-term systems thinking.
-    </p>
-
-
-    <!-- Featured Project -->
-
-    <section>
-
-      <h2>
-        Featured Project
-      </h2>
-
-      <div class="category-links">
-
-        <h2>
-          <a href="re-creation-existing-materials.html">
-            Re-creation of Existing Materials
-          </a>
-        </h2>
-
-        <h3>
-          Textile Waste · Reclaimed Garments · Material Transformation
-        </h3>
-
-        <p>
-          This project responds to the accumulation of non-degradable textile waste
-          generated by extensive production models and fast fashion systems.
-          Instead of introducing new materials, the design process focuses on
-          re-creation and transformation of existing garments.
-        </p>
+        <img
+          src="../images/head-ritual-01.png"
+          alt="Head Ritual 01"
+        >
 
       </div>
 
-    </section>
 
 
-    <!-- Clothing Categories -->
+      <!-- 02 -->
 
-    <section>
+      <div class="gallery-item">
 
-      <h2>
-        Clothing &amp; Fashion Categories by Body Area
-      </h2>
-
-      <div class="category-links">
-
-
-        <!-- 01 -->
-
-        <h2>
-          <a
-            href="https://cecilia--studio.blogspot.com/2026/08/headwear.html"
-            target="_blank"
-            rel="noopener noreferrer">
-            01 · Headwear
-          </a>
-        </h2>
-
-        <h3>
-          Headwear · Hair Accessories
-        </h3>
-
-        <p>
-          Items worn on the head, hair, or around the face.
-        </p>
-
-
-        <!-- 02 -->
-
-        <h2>
-          <a href="face-eye-accessories.html">
-            02 · Face &amp; Eye Accessories
-          </a>
-        </h2>
-
-        <h3>
-          Facewear · Eyewear
-        </h3>
-
-        <p>
-          Glasses, sunglasses, masks, and fashion face accessories.
-        </p>
-
-
-        <!-- 03 -->
-
-        <h2>
-          <a href="ear-accessories.html">
-            03 · Ear Accessories
-          </a>
-        </h2>
-
-        <h3>
-          Earrings · Ear Cuffs · Ear Clips
-        </h3>
-
-        <p>
-          Decorative accessories worn on or around the ears.
-        </p>
-
-
-        <!-- 04 -->
-
-        <h2>
-          <a href="neckwear.html">
-            04 · Neckwear
-          </a>
-        </h2>
-
-        <h3>
-          Scarf · Tie · Necklace · Choker
-        </h3>
-
-        <p>
-          Items worn around the neck for styling, warmth, or symbolic expression.
-        </p>
-
-
-        <!-- 05 -->
-
-        <h2>
-          <a
-            href="https://cecilia--studio.blogspot.com/2025/01/blog-post_6.html"
-            target="_blank"
-            rel="noopener noreferrer">
-            05 · Upper Body
-          </a>
-        </h2>
-
-        <h3>
-          Tops · Jackets · Coats · Vests
-        </h3>
-
-        <p>
-          The core category of garments designed for the upper body.
-        </p>
-
-
-        <!-- 06 -->
-
-        <h2>
-          <a href="hands-arms.html">
-            06 · Hands &amp; Arms
-          </a>
-        </h2>
-
-        <h3>
-          Gloves · Bracelets · Rings · Armwear
-        </h3>
-
-        <p>
-          Accessories and garments designed for the hands, wrists, and arms.
-        </p>
-
-
-        <!-- 07 -->
-
-        <h2>
-          <a href="waistwear.html">
-            07 · Waistwear
-          </a>
-        </h2>
-
-        <h3>
-          Belt · Corset Belt · Waist Chain
-        </h3>
-
-        <p>
-          Items that define, support, or decorate the waistline.
-        </p>
-
-
-        <!-- 08 -->
-
-        <h2>
-          <a
-            href="https://cecilia--studio.blogspot.com/2026/08/blog-post_813.html"
-            target="_blank"
-            rel="noopener noreferrer">
-            08 · Lower Body
-          </a>
-        </h2>
-
-        <h3>
-          Pants · Skirts · Shorts · Leggings
-        </h3>
-
-        <p>
-          Garments designed for the hips, legs, and lower body structure.
-        </p>
-
-
-        <!-- 09 -->
-
-        <h2>
-          <a href="full-body-garments.html">
-            09 · Full-body Garments
-          </a>
-        </h2>
-
-        <h3>
-          Dress · Robe · Jumpsuit · Kimono
-        </h3>
-
-        <p>
-          Garments that cover or connect multiple areas of the body.
-        </p>
-
-
-        <!-- 10 -->
-
-        <h2>
-          <a href="legwear.html">
-            10 · Legwear
-          </a>
-        </h2>
-
-        <h3>
-          Socks · Stockings · Pantyhose · Leg Warmers
-        </h3>
-
-        <p>
-          Textile items worn directly on the legs or feet.
-        </p>
-
-
-        <!-- 11 -->
-
-        <h2>
-          <a href="footwear.html">
-            11 · Footwear
-          </a>
-        </h2>
-
-        <h3>
-          Shoes · Boots · Sandals · Loafers
-        </h3>
-
-        <p>
-          Items designed to protect, support, and style the feet.
-        </p>
-
-
-        <!-- 12 -->
-
-        <h2>
-          <a href="functional-accessories.html">
-            12 · Functional Accessories
-          </a>
-        </h2>
-
-        <h3>
-          Bags · Wallets · Watches · Brooches
-        </h3>
-
-        <p>
-          Objects that complement styling while adding practical function.
-        </p>
-
-
-        <!-- 13 -->
-
-        <h2>
-          <a href="undergarments.html">
-            13 · Undergarments
-          </a>
-        </h2>
-
-        <h3>
-          Underwear · Lingerie · Shapewear · Sleepwear
-        </h3>
-
-        <p>
-          Inner garments designed for comfort, support, shaping, and intimacy.
-        </p>
-
+        <img
+          src="../images/head-ritual-02.png"
+          alt="Head Ritual 02"
+          loading="lazy"
+        >
 
       </div>
 
-    </section>
 
+
+      <!-- 03 -->
+
+      <div class="gallery-item">
+
+        <img
+          src="../images/head-ritual-03.png"
+          alt="Head Ritual 03"
+          loading="lazy"
+        >
+
+      </div>
+
+
+
+      <!-- 04 -->
+
+      <div class="gallery-item">
+
+        <img
+          src="../images/head-ritual-04.png"
+          alt="Head Ritual 04"
+          loading="lazy"
+        >
+
+      </div>
+
+
+
+      <!-- 05 -->
+
+      <div class="gallery-item">
+
+        <img
+          src="../images/head-ritual-05.png"
+          alt="Head Ritual 05"
+          loading="lazy"
+        >
+
+      </div>
+
+
+
+      <!-- 06 -->
+
+      <div class="gallery-item">
+
+        <img
+          src="../images/head-ritual-06.png"
+          alt="Head Ritual 06"
+          loading="lazy"
+        >
+
+      </div>
+
+
+
+      <!-- 07 -->
+
+      <div class="gallery-item">
+
+        <img
+          src="../images/head-ritual-07.png"
+          alt="Head Ritual 07"
+          loading="lazy"
+        >
+
+      </div>
+
+
+
+      <!-- 08 -->
+
+      <div class="gallery-item">
+
+        <img
+          src="../images/head-ritual-08.png"
+          alt="Head Ritual 08"
+          loading="lazy"
+        >
+
+      </div>
+
+
+
+      <!-- 09 -->
+
+      <div class="gallery-item">
+
+        <img
+          src="../images/head-ritual-09.png"
+          alt="Head Ritual 09"
+          loading="lazy"
+        >
+
+      </div>
+
+
+
+      <!-- 10 -->
+
+      <div class="gallery-item">
+
+        <img
+          src="../images/head-ritual-10.png"
+          alt="Head Ritual 10"
+          loading="lazy"
+        >
+
+      </div>
+
+
+
+      <!-- 11 -->
+
+      <div class="gallery-item">
+
+        <img
+          src="../images/head-ritual-11.png"
+          alt="Head Ritual 11"
+          loading="lazy"
+        >
+
+      </div>
+
+
+
+      <!-- 12 -->
+
+      <div class="gallery-item">
+
+        <img
+          src="../images/head-ritual-12.png"
+          alt="Head Ritual 12"
+          loading="lazy"
+        >
+
+      </div>
+
+
+    </div>
+
+
+
+    <!-- =========================
+         BACK
+         ========================= -->
 
     <p class="back-link">
-      <a href="index.html">
-        ← Back to ASAGAO Ecosystem
+
+      <a href="asagao-wellness.html">
+
+        ← Back to ASAGAO Wellness
+
       </a>
+
     </p>
 
+
   </main>
+
 
 </body>
 
 </html>
-```
