@@ -3,41 +3,76 @@
 
 <head>
 <meta charset="UTF-8" />
-<title>ASAGAO Sustainability · Cecilia ESG · NOW</title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>ASAGAO Sustainability · Cecilia ESG · NOW</title>
+
+<meta
+name="description"
+content="ASAGAO Sustainability explores ecological design, reclaimed textiles, slow production, green finance, and sustainable fashion systems."
+/>
 
 <style>
 :root {
 --text: #222;
+--body-text: #333;
 --soft-text: #666;
 --light-text: #888;
 --line: #e8e8e8;
 --hover: #000;
 --bg: #fff;
+--media-bg: #f5f5f5;
 }
 
 * {
 box-sizing: border-box;
 }
 
+html {
+scroll-behavior: smooth;
+}
+
 body {
-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 max-width: 820px;
 margin: 72px auto;
 padding: 0 28px 120px;
+
+font-family:
+-apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+Helvetica,
+Arial,
+sans-serif;
+
+font-size: 16px;
 line-height: 1.9;
+
 color: var(--text);
 background: var(--bg);
 }
+
+a {
+transition:
+color 0.2s ease,
+opacity 0.2s ease;
+}
+
+/* Navigation */
 
 nav {
 margin-bottom: 4em;
 }
 
 nav a {
+display: inline-block;
 margin-right: 22px;
-text-decoration: none;
+margin-bottom: 8px;
+
 color: var(--soft-text);
+text-decoration: none;
+
 font-size: 0.95em;
 }
 
@@ -45,25 +80,35 @@ nav a:hover {
 color: var(--hover);
 }
 
+nav a.current {
+color: var(--text);
+font-weight: 600;
+}
+
+/* Typography */
+
 h1 {
+margin: 0 0 0.35em;
+
 font-size: clamp(2.8rem, 6vw, 4.2rem);
 font-weight: 700;
 letter-spacing: -2px;
-margin-bottom: 0.35em;
 line-height: 1.05;
 }
 
 h2 {
 margin-top: 3em;
 margin-bottom: 0.5em;
+
 font-size: 1.5em;
 font-weight: 600;
 letter-spacing: -0.5px;
+line-height: 1.35;
 }
 
 h2 a {
-text-decoration: none;
 color: var(--text);
+text-decoration: none;
 }
 
 h2 a:hover {
@@ -73,28 +118,39 @@ opacity: 0.6;
 h3 {
 margin-top: 0.2em;
 margin-bottom: 0.8em;
+
 color: var(--soft-text);
+
 font-size: 1.02em;
 font-weight: 500;
+line-height: 1.6;
 }
 
 p {
+margin-top: 0;
 margin-bottom: 1.4em;
-color: #333;
+
+color: var(--body-text);
 }
 
+/* Intro */
+
 .meta {
+margin-bottom: 2.2em;
+
 color: var(--light-text);
+
 font-size: 0.92em;
 letter-spacing: 0.3px;
-margin-bottom: 2.2em;
 }
 
 .caption {
-font-size: 0.86em;
-color: var(--light-text);
 margin-top: 0.8em;
 margin-bottom: 2.2em;
+
+color: var(--light-text);
+
+font-size: 0.86em;
 line-height: 1.7;
 }
 
@@ -108,39 +164,64 @@ text-underline-offset: 3px;
 color: var(--hover);
 }
 
+/* Media */
+
 .media {
 width: 100%;
 margin: 3em 0 1em;
-border-radius: 14px;
+
 overflow: hidden;
-background: #f5f5f5;
+
+background: var(--media-bg);
+border-radius: 14px;
 }
 
 .media iframe {
+display: block;
+
 width: 100%;
 height: auto;
+
 aspect-ratio: 16 / 9;
-display: block;
+
 border: 0;
 }
+
+/* Sections */
 
 section {
 margin-top: 5em;
 padding-top: 2em;
+
 border-top: 1px solid var(--line);
+}
+
+section > h2:first-child {
+margin-top: 0;
 }
 
 .category-links {
 margin-top: 2.5em;
 }
 
+.category-links h2 {
+margin-top: 2.8em;
+}
+
+.category-links h2:first-child {
+margin-top: 0;
+}
+
 .category-links p {
 max-width: 680px;
 }
 
+/* Back link */
+
 .back-link {
-margin-top: 4em;
+margin-top: 5em;
 padding-top: 2em;
+
 border-top: 1px solid var(--line);
 }
 
@@ -153,10 +234,21 @@ text-decoration: none;
 color: var(--hover);
 }
 
+/* Accessibility */
+
+a:focus-visible {
+outline: 2px solid var(--text);
+outline-offset: 4px;
+border-radius: 2px;
+}
+
+/* Mobile */
+
 @media (max-width: 768px) {
 body {
 margin: 48px auto;
 padding: 0 20px 80px;
+
 line-height: 1.85;
 }
 
@@ -165,11 +257,22 @@ margin-bottom: 3em;
 }
 
 nav a {
-display: inline-block;
-margin-bottom: 10px;
+margin-right: 18px;
+}
+
+h1 {
+letter-spacing: -1.5px;
 }
 
 h2 {
+margin-top: 2.4em;
+}
+
+section {
+margin-top: 4em;
+}
+
+.category-links h2 {
 margin-top: 2.4em;
 }
 }
@@ -179,30 +282,57 @@ margin-top: 2.4em;
 <body>
 
 <nav aria-label="Primary navigation">
-<a href="../index.html">About</a>
 
-<a href="index.html" class="current">Ecosystem</a>
+<a href="../index.html">
+About
+</a>
 
-<a href="https://cecilia--studio.blogspot.com/"
+<a
+href="index.html"
+class="current"
+aria-current="page">
+Ecosystem
+</a>
+
+<a
+href="https://cecilia--studio.blogspot.com/"
 target="_blank"
-rel="noopener noreferrer">Journal</a>
+rel="noopener noreferrer">
+Journal
+</a>
 
-<a href="../lectures.html">Learning</a>
+<a href="../lectures.html">
+Learning
+</a>
 
-<a href="../testimonials.html">Testimonials</a>
+<a href="../testimonials.html">
+Testimonials
+</a>
 
-<a href="../contact.html">Contact</a>
+<a href="../contact.html">
+Contact
+</a>
+
 </nav>
+
 
 <main>
 
-<h1>ASAGAO SUSTAINABILITY</h1>
+<header>
+
+<h1>
+ASAGAO SUSTAINABILITY
+</h1>
 
 <p class="meta">
 ESG · Sustainability Systems · Green Finance · Ecological Research
 </p>
 
+</header>
+
+
 <div class="media">
+
 <iframe
 src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
 title="ASAGAO Sustainability Featured Project"
@@ -211,11 +341,14 @@ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; pic
 referrerpolicy="strict-origin-when-cross-origin"
 allowfullscreen>
 </iframe>
+
 </div>
+
 
 <p class="caption">
 Material transformation · Slow production · Ecological aesthetics
 </p>
+
 
 <p>
 ASAGAO Sustainability explores ecological design, reclaimed textiles,
@@ -233,13 +366,27 @@ but as a practice embedded in everyday material decisions,
 cultural responsibility, ecological awareness, and long-term systems thinking.
 </p>
 
+
+<!-- Featured Project -->
+
 <section>
-<h2>Featured Project</h2>
+
+<h2>
+Featured Project
+</h2>
 
 <div class="category-links">
 
-<h2><a href="re-creation-existing-materials.html">Re-creation of Existing Materials</a></h2>
-<h3>Textile Waste · Reclaimed Garments · Material Transformation</h3>
+<h2>
+<a href="re-creation-existing-materials.html">
+Re-creation of Existing Materials
+</a>
+</h2>
+
+<h3>
+Textile Waste · Reclaimed Garments · Material Transformation
+</h3>
+
 <p>
 This project responds to the accumulation of non-degradable textile waste
 generated by extensive production models and fast fashion systems.
@@ -248,86 +395,264 @@ re-creation and transformation of existing garments.
 </p>
 
 </div>
+
 </section>
 
+
+<!-- Clothing Categories -->
+
 <section>
-<h2>Clothing & Fashion Categories by Body Area</h2>
+
+<h2>
+Clothing &amp; Fashion Categories by Body Area
+</h2>
 
 <div class="category-links">
 
-<h2><a href="headwear.html">01 · Headwear</a></h2>
-<h3>Headwear · Hair Accessories</h3>
-<p>Items worn on the head, hair, or around the face.</p>
 
-<h2><a href="face-eye-accessories.html">02 · Face & Eye Accessories</a></h2>
-<h3>Facewear · Eyewear</h3>
-<p>Glasses, sunglasses, masks, and fashion face accessories.</p>
+<!-- 01 -->
 
-<h2><a href="ear-accessories.html">03 · Ear Accessories</a></h2>
-<h3>Earrings · Ear Cuffs · Ear Clips</h3>
-<p>Decorative accessories worn on or around the ears.</p>
-
-        <h2><a href="neckwear.html">04 · Neckwear</a></h2>
-        <h2>
-          <a href="https://cecilia--studio.blogspot.com/2026/08/headwear.html"
-                 target="_blank"
-         rel="noopener noreferrer">
-         04 · Neckwear
-          </a>
-    </h2>
-<h3>Scarf · Tie · Necklace · Choker</h3>
-<p>Items worn around the neck for styling, warmth, or symbolic expression.</p>
 <h2>
-<a href="https://cecilia--studio.blogspot.com/2025/01/blog-post_6.html"
+<a
+href="https://cecilia--studio.blogspot.com/2026/08/headwear.html"
+target="_blank"
+rel="noopener noreferrer">
+01 · Headwear
+</a>
+</h2>
+
+<h3>
+Headwear · Hair Accessories
+</h3>
+
+<p>
+Items worn on the head, hair, or around the face.
+</p>
+
+
+<!-- 02 -->
+
+<h2>
+<a href="face-eye-accessories.html">
+02 · Face &amp; Eye Accessories
+</a>
+</h2>
+
+<h3>
+Facewear · Eyewear
+</h3>
+
+<p>
+Glasses, sunglasses, masks, and fashion face accessories.
+</p>
+
+
+<!-- 03 -->
+
+<h2>
+<a href="ear-accessories.html">
+03 · Ear Accessories
+</a>
+</h2>
+
+<h3>
+Earrings · Ear Cuffs · Ear Clips
+</h3>
+
+<p>
+Decorative accessories worn on or around the ears.
+</p>
+
+
+<!-- 04 -->
+
+<h2>
+<a href="neckwear.html">
+04 · Neckwear
+</a>
+</h2>
+
+<h3>
+Scarf · Tie · Necklace · Choker
+</h3>
+
+<p>
+Items worn around the neck for styling, warmth, or symbolic expression.
+</p>
+
+
+<!-- 05 -->
+
+<h2>
+<a
+href="https://cecilia--studio.blogspot.com/2025/01/blog-post_6.html"
 target="_blank"
 rel="noopener noreferrer">
 05 · Upper Body
 </a>
 </h2>
 
-<h3>Tops · Jackets · Coats · Vests</h3>
-<p>The core category of garments designed for the upper body.</p>
+<h3>
+Tops · Jackets · Coats · Vests
+</h3>
 
-<h2><a href="hands-arms.html">06 · Hands & Arms</a></h2>
-<h3>Gloves · Bracelets · Rings · Armwear</h3>
-<p>Accessories and garments designed for the hands, wrists, and arms.</p>
+<p>
+The core category of garments designed for the upper body.
+</p>
 
-<h2><a href="waistwear.html">07 · Waistwear</a></h2>
-<h3>Belt · Corset Belt · Waist Chain</h3>
-<p>Items that define, support, or decorate the waistline.</p>
 
-<h2><a href="lower-body.html">08 · Lower Body</a></h2>
-<h3>Pants · Skirts · Shorts · Leggings</h3>
-<p>Garments designed for the hips, legs, and lower body structure.</p>
+<!-- 06 -->
 
-<h2><a href="full-body-garments.html">09 · Full-body Garments</a></h2>
-<h3>Dress · Robe · Jumpsuit · Kimono</h3>
-<p>Garments that cover or connect multiple areas of the body.</p>
+<h2>
+<a href="hands-arms.html">
+06 · Hands &amp; Arms
+</a>
+</h2>
 
-<h2><a href="legwear.html">10 · Legwear</a></h2>
-<h3>Socks · Stockings · Pantyhose · Leg Warmers</h3>
-<p>Textile items worn directly on the legs or feet.</p>
+<h3>
+Gloves · Bracelets · Rings · Armwear
+</h3>
 
-<h2><a href="footwear.html">11 · Footwear</a></h2>
-<h3>Shoes · Boots · Sandals · Loafers</h3>
-<p>Items designed to protect, support, and style the feet.</p>
+<p>
+Accessories and garments designed for the hands, wrists, and arms.
+</p>
 
-<h2><a href="functional-accessories.html">12 · Functional Accessories</a></h2>
-<h3>Bags · Wallets · Watches · Brooches</h3>
-<p>Objects that complement styling while adding practical function.</p>
 
-<h2><a href="undergarments.html">13 · Undergarments</a></h2>
-<h3>Underwear · Lingerie · Shapewear · Sleepwear</h3>
-<p>Inner garments designed for comfort, support, shaping, and intimacy.</p>
+<!-- 07 -->
+
+<h2>
+<a href="waistwear.html">
+07 · Waistwear
+</a>
+</h2>
+
+<h3>
+Belt · Corset Belt · Waist Chain
+</h3>
+
+<p>
+Items that define, support, or decorate the waistline.
+</p>
+
+
+<!-- 08 -->
+
+<h2>
+<a
+href="https://cecilia--studio.blogspot.com/2026/08/blog-post_813.html"
+target="_blank"
+rel="noopener noreferrer">
+08 · Lower Body
+</a>
+</h2>
+
+<h3>
+Pants · Skirts · Shorts · Leggings
+</h3>
+
+<p>
+Garments designed for the hips, legs, and lower body structure.
+</p>
+
+
+<!-- 09 -->
+
+<h2>
+<a href="full-body-garments.html">
+09 · Full-body Garments
+</a>
+</h2>
+
+<h3>
+Dress · Robe · Jumpsuit · Kimono
+</h3>
+
+<p>
+Garments that cover or connect multiple areas of the body.
+</p>
+
+
+<!-- 10 -->
+
+<h2>
+<a href="legwear.html">
+10 · Legwear
+</a>
+</h2>
+
+<h3>
+Socks · Stockings · Pantyhose · Leg Warmers
+</h3>
+
+<p>
+Textile items worn directly on the legs or feet.
+</p>
+
+
+<!-- 11 -->
+
+<h2>
+<a href="footwear.html">
+11 · Footwear
+</a>
+</h2>
+
+<h3>
+Shoes · Boots · Sandals · Loafers
+</h3>
+
+<p>
+Items designed to protect, support, and style the feet.
+</p>
+
+
+<!-- 12 -->
+
+<h2>
+<a href="functional-accessories.html">
+12 · Functional Accessories
+</a>
+</h2>
+
+<h3>
+Bags · Wallets · Watches · Brooches
+</h3>
+
+<p>
+Objects that complement styling while adding practical function.
+</p>
+
+
+<!-- 13 -->
+
+<h2>
+<a href="undergarments.html">
+13 · Undergarments
+</a>
+</h2>
+
+<h3>
+Underwear · Lingerie · Shapewear · Sleepwear
+</h3>
+
+<p>
+Inner garments designed for comfort, support, shaping, and intimacy.
+</p>
+
 
 </div>
+
 </section>
 
+
 <p class="back-link">
-<a href="index.html">← Back to ASAGAO Ecosystem</a>
+<a href="index.html">
+← Back to ASAGAO Ecosystem
+</a>
 </p>
 
 </main>
 
 </body>
+
 </html>
