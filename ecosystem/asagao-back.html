@@ -5,144 +5,604 @@
 
   <meta charset="UTF-8">
 
-  <title>Back Therapy · ASAGAO WELLNESS</title>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10 · Back Therapy · ASAGAO WELLNESS</title>
+
+  <meta
+    name="description"
+    content="ASAGAO WELLNESS Back Therapy — back care, postural comfort, breathing support, nervous system regulation, and restorative therapeutic touch."
+  >
+
 
   <style>
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      max-width: 960px;
-      margin: 50px auto;
-      padding: 0 24px;
-      background: #fff;
-      color: #222;
-      line-height: 1.8;
+    /* ========================================
+       ROOT
+       ======================================== */
+
+    :root {
+      --text: #222;
+      --body-text: #333;
+      --soft-text: #666;
+      --light-text: #888;
+      --line: #e8e8e8;
+      --background: #ffffff;
+      --image-background: #f7f7f5;
+      --hover: #000000;
     }
+
+
+    * {
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+      max-width: 920px;
+
+      margin: 72px auto;
+
+      padding:
+        0
+        28px
+        120px;
+
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Helvetica,
+        Arial,
+        sans-serif;
+
+      font-size: 16px;
+      line-height: 1.9;
+
+      color: var(--text);
+      background: var(--background);
+    }
+
+
+
+    /* ========================================
+       LINKS
+       ======================================== */
+
+    a {
+      color: inherit;
+
+      transition:
+        color 0.2s ease,
+        opacity 0.2s ease;
+    }
+
+
+    a:focus-visible {
+      outline: 2px solid var(--text);
+      outline-offset: 4px;
+      border-radius: 2px;
+    }
+
+
+
+    /* ========================================
+       NAVIGATION
+       ======================================== */
 
     nav {
-      margin-bottom: 3em;
+      margin-bottom: 5em;
+      line-height: 1.6;
     }
 
+
     nav a {
-      margin-right: 18px;
+      display: inline-block;
+
+      margin-right: 22px;
+      margin-bottom: 10px;
+
+      color: var(--soft-text);
+
       text-decoration: none;
-      color: #444;
+
       font-size: 0.95em;
     }
 
+
     nav a:hover {
-      text-decoration: underline;
+      color: var(--hover);
     }
 
+
+    nav a.current {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+
+
+    /* ========================================
+       MAIN TITLE
+       ======================================== */
+
     h1 {
-      font-size: 4.2em;
+      margin: 0 0 0.35em;
+
+      font-size: clamp(2.8rem, 6vw, 4.3rem);
+
       font-weight: 700;
+
       letter-spacing: -2px;
-      margin-bottom: 0.5em;
+
       line-height: 1.05;
     }
 
-    .meta {
-      font-size: 1em;
-      color: #777;
-      margin-bottom: 4em;
+
+    h1 a {
+      color: var(--text);
+      text-decoration: none;
     }
+
+
+    h1 a:hover {
+      opacity: 0.6;
+    }
+
+
+
+    /* ========================================
+       META
+       ======================================== */
+
+    .meta {
+      margin-top: 0;
+      margin-bottom: 3em;
+
+      color: var(--light-text);
+
+      font-size: 0.92em;
+
+      letter-spacing: 0.3px;
+    }
+
+
+
+    /* ========================================
+       INTRODUCTION
+       ======================================== */
 
     .intro {
-      max-width: 760px;
-      margin-bottom: 4em;
-      color: #444;
+      max-width: 720px;
+      margin-bottom: 5em;
     }
+
+
+    .intro p {
+      margin: 0 0 1.5em;
+      color: var(--body-text);
+    }
+
+
+
+    /* ========================================
+       BACK THERAPY GALLERY
+
+       SINGLE COLUMN
+       ONE IMAGE PER ROW
+       ======================================== */
 
     .gallery {
-      display: grid;
-      gap: 70px;
+      display: flex !important;
+
+      flex-direction: column !important;
+
+      flex-wrap: nowrap !important;
+
+      align-items: stretch;
+
+      width: 100%;
+      max-width: 100%;
+
+      gap: 48px;
+
+      margin: 4em 0 0;
+
+      padding: 0;
     }
+
+
+
+    /* ========================================
+       INDIVIDUAL IMAGE
+       ======================================== */
+
+    .gallery-item {
+      display: block !important;
+
+      width: 100% !important;
+      max-width: 100% !important;
+
+      flex: 0 0 100% !important;
+
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
 
     .gallery-item img {
-      width: 100%;
-      height: auto;
       display: block;
+
+      width: 100% !important;
+      max-width: 100% !important;
+      height: auto !important;
+
+      margin: 0 auto;
+      padding: 0;
+
+      object-fit: contain;
+
+      background: var(--image-background);
+
+      border-radius: 12px;
+
+      transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
     }
 
+
+    .gallery-item img:hover {
+      opacity: 0.96;
+      transform: translateY(-2px);
+    }
+
+
+
+    /* ========================================
+       CAPTION
+       ======================================== */
+
     .caption {
-      font-size: 0.9em;
-      color: #777;
       margin-top: 0.8em;
+      margin-bottom: 0;
+
+      color: var(--light-text);
+
+      font-size: 0.9em;
+
+      line-height: 1.7;
+    }
+
+
+
+    /* ========================================
+       BACK LINK
+       ======================================== */
+
+    .back-link {
+      margin-top: 7em;
+
+      padding-top: 2em;
+
+      border-top: 1px solid var(--line);
+    }
+
+
+    .back-link a {
+      color: var(--soft-text);
+      text-decoration: none;
+    }
+
+
+    .back-link a:hover {
+      color: var(--hover);
+    }
+
+
+
+    /* ========================================
+       TABLET
+       ======================================== */
+
+    @media (max-width: 768px) {
+
+      body {
+        margin: 48px auto;
+
+        padding:
+          0
+          20px
+          80px;
+
+        line-height: 1.85;
+      }
+
+
+      nav {
+        margin-bottom: 4em;
+      }
+
+
+      nav a {
+        margin-right: 18px;
+      }
+
+
+      h1 {
+        letter-spacing: -1.5px;
+      }
+
+
+      .intro {
+        margin-bottom: 4em;
+      }
+
+
+      /* Keep gallery single-column */
+
+      .gallery {
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        flex-wrap: nowrap !important;
+
+        gap: 40px;
+      }
+
+
+      .gallery-item {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+
+
+      .gallery-item img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+      }
+
+
+      .back-link {
+        margin-top: 5em;
+      }
+
+    }
+
+
+
+    /* ========================================
+       MOBILE
+       ======================================== */
+
+    @media (max-width: 560px) {
+
+      body {
+        margin-top: 36px;
+      }
+
+
+      nav {
+        margin-bottom: 3.5em;
+      }
+
+
+      h1 {
+        font-size:
+          clamp(
+            2.4rem,
+            12vw,
+            3.3rem
+          );
+      }
+
+
+      /* Keep gallery single-column */
+
+      .gallery {
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        flex-wrap: nowrap !important;
+
+        gap: 36px;
+      }
+
+
+      .gallery-item {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+
+
+      .gallery-item img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+      }
+
     }
 
   </style>
 
 </head>
 
+
 <body>
 
-<nav>
-  <a href="../index.html">About</a>
-  <a href="./">ASAGAO Ecosystem</a>
-  <a href="../lectures.html">Lectures</a>
-  <a href="../contact.html">Contact</a>
-</nav>
 
-<h1>10 · Back Therapy</h1>
+  <!-- ========================================
+       NAVIGATION
+       ======================================== -->
 
-<p class="meta">
-  ASAGAO WELLNESS · Back · Spine · Restorative Flow
-</p>
+  <nav aria-label="Primary navigation">
 
-<div class="intro">
 
-  <p>
-    A restorative back treatment designed to support muscular ease,
-    breath,
-    spinal comfort,
-    and postural awareness through slow therapeutic touch and calming bodywork.
-  </p>
+    <a href="index.html"
+       class="current"
+       aria-current="page">
+      Ecosystem
+    </a>
 
-  <p>
-    Inspired by Eastern healing philosophy and quiet luxury wellness,
-    Back Therapy focuses on the back as a central pathway for tension release,
-    nervous system regulation,
-    circulation,
-    breathing rhythm,
-    and whole-body restoration.
-  </p>
 
-</div>
+    <a href="https://cecilia--studio.blogspot.com/"
+       target="_blank"
+       rel="noopener noreferrer">
+      Journal
+    </a>
 
-<div class="gallery">
 
-  <div class="gallery-item">
-    <img src="../images/back-therapy-01.png" alt="Back Therapy 01">
-    <p class="caption">
-      Back meridian care · Spine · Restorative flow · Muscular ease
+    <a href="../lectures.html">
+      Learning
+    </a>
+
+
+    <a href="../testimonials.html">
+      Testimonials
+    </a>
+
+
+    <a href="../contact.html">
+      Contact
+    </a>
+
+
+  </nav>
+
+
+
+  <!-- ========================================
+       MAIN CONTENT
+       ======================================== -->
+
+  <main>
+
+
+    <!-- ========================================
+         10 · BACK THERAPY TITLE
+         ======================================== -->
+
+    <header>
+
+
+      <h1>
+
+        <a href="https://cecilia--studio.blogspot.com/2026/08/10-back-therapy.html"
+           target="_blank"
+           rel="noopener noreferrer">
+
+          10 · Back Therapy
+
+        </a>
+
+      </h1>
+
+
+      <p class="meta">
+
+        ASAGAO WELLNESS ·
+        Back Therapy ·
+        Postural Comfort ·
+        Nervous System Care
+
+      </p>
+
+
+    </header>
+
+
+
+    <!-- ========================================
+         INTRODUCTION
+         ======================================== -->
+
+    <div class="intro">
+
+
+      <p>
+
+        Back Therapy focuses on releasing accumulated tension
+        through the back, spinal region, and surrounding soft tissues
+        using slow therapeutic touch and restorative bodywork.
+
+      </p>
+
+
+      <p>
+
+        Inspired by Eastern healing philosophy and quiet luxury wellness,
+        the ritual supports postural comfort,
+        breathing awareness,
+        nervous system regulation,
+        and deep restorative calm.
+
+      </p>
+
+
+    </div>
+
+
+
+    <!-- ========================================
+         BACK THERAPY GALLERY
+         SINGLE COLUMN
+         ======================================== -->
+
+    <div class="gallery">
+
+
+      <!-- BACK THERAPY 04 -->
+
+      <div class="gallery-item">
+
+
+        <img
+          src="../images/back-therapy-04.png"
+          alt="Back Therapy 04"
+        >
+
+
+        <p class="caption">
+
+          Back · Breath · Postural comfort · Deep restorative calm
+
+        </p>
+
+
+      </div>
+
+
+    </div>
+
+
+
+    <!-- ========================================
+         BACK
+         ======================================== -->
+
+    <p class="back-link">
+
+      <a href="asagao-wellness.html">
+
+        ← Back to ASAGAO Wellness
+
+      </a>
+
     </p>
-  </div>
 
-  <div class="gallery-item">
-    <img src="../images/back-therapy-02.png" alt="Back Therapy 02">
-    <p class="caption">
-      ASAGAO WELLNESS · Quiet luxury back therapy
-    </p>
-  </div>
 
-  <div class="gallery-item">
-    <img src="../images/back-therapy-03.png" alt="Back Therapy 03">
-    <p class="caption">
-      Back · Breath · Postural comfort · Deep restorative calm
-    </p>
-  </div>
+  </main>
 
-    <div class="gallery-item">
-    <img src="../images/back-therapy-04.png" alt="Back Therapy 04">
-    <p class="caption">
-      Back · Breath · Postural comfort · Deep restorative calm
-    </p>
-  </div>
-
-</div>
 
 </body>
+
 </html>
